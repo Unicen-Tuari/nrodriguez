@@ -1,0 +1,91 @@
+.cabeceraCalendario{
+  text-align: center;
+}
+
+.tituloMes{
+color: #ffffff;
+font-size: 10px;
+font-weight:bold;
+line-height: 21px;
+text-transform: uppercase;
+visibility: visible;
+}
+
+.menuhomepage a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menuhomepage a:visited{
+  color:white;
+}
+
+.menuhomepage a:active{
+  color:white;
+}
+
+.menuhomepage a:link{
+  color:white;
+}
+
+.menuhomepage li{
+  list-style: none;
+  display: inline;
+  margin: 10px;
+  font-style:normal;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color:#010101;
+  left:10%;
+  position:relative;
+}
+
+.menuhomepage{
+  background-color: black;
+}
+
+
+dl,dd,dt{
+  display:inline;
+  margin-left: auto;
+}
+
+.sizeImg{
+    image-resolution: 10dpi;
+    width: 5%;
+    height: 40px;
+}
+
+.positionImg{
+  text-align: left;
+  height: 16px;
+}
+
+.imghomepage{
+  background-image:url('../css/images/f1.jpg');
+}
+
+.fondopilotlist{
+  background-color: grey;
+}
+
+.stylelistpilot li{
+  list-style: none;
+}
+
+.styleimgpilot{
+  position: absolute;
+  left: 0px;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+
+.stylelistpilot a{
+  text-decoration: none;
+  color: black;
+}
+
+.stylelistpilot ul{
+  display: inline-block;
+}
