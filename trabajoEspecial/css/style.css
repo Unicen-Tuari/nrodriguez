@@ -89,3 +89,7 @@ dl,dd,dt{
 .stylelistpilot ul{
   display: inline-block;
 }
+
+.stylelistpilot a:hover{
+  color:red;
+}
