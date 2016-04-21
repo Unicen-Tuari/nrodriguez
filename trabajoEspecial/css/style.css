@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.sizeMenu{
+  width: 800px;
+  position: relative;
+  left: 200px;
+}
+
 .tituloMes{
 color: #ffffff;
 font-size: 10px;
@@ -11,24 +17,24 @@ text-transform: uppercase;
 visibility: visible;
 }
 
-.menuhomepage a{
+.estilomenuhomepage a{
   text-decoration: none;
   font-size: 20px;
 }
 
-.menuhomepage a:visited{
+.estilomenuhomepage a:visited{
   color:white;
 }
 
-.menuhomepage a:active{
+.estilomenuhomepage a:active{
   color:white;
 }
 
-.menuhomepage a:link{
+.estilomenuhomepage a:link{
   color:white;
 }
 
-.menuhomepage li{
+.estilomenuhomepage li{
   list-style: none;
   display: inline;
   margin: 10px;
@@ -36,14 +42,12 @@ visibility: visible;
   letter-spacing: 1px;
   font-size: 20px;
   color:#010101;
-  left:10%;
-  position:relative;
 }
 
-.menuhomepage{
+.estilomenuhomepage{
   background-color: black;
   border-radius: 4em/5em;
-  width: 700px;
+  text-align: center;
 }
 
 
@@ -59,7 +63,8 @@ dl,dd,dt{
 }
 
 .positionImg{
-  text-align: left;
+  right: 350px;
+  position: relative;
   height: 16px;
 }
 
