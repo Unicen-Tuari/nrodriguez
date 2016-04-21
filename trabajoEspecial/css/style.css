@@ -42,7 +42,8 @@ visibility: visible;
 
 .menuhomepage{
   background-color: black;
-    border-radius: 4em/5em;
+  border-radius: 4em/5em;
+  width: 700px;
 }
 
 
@@ -72,9 +73,6 @@ dl,dd,dt{
 
 .stylelistpilot li{
   list-style: none;
-  background-color:#F4F4F4;
-  border-bottom: 1px solid #7C7C7C;
-  border-top: 1px solid #FFF;
 }
 
 .styleimgpilot{
@@ -92,11 +90,4 @@ dl,dd,dt{
 
 .stylelistpilot ul{
   display: inline-block;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-}
-
-.stylelistpilot a{
-
 }
