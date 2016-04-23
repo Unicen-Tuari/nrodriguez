@@ -1,0 +1,32 @@
+/*body{
+ background-image: url('../css/Images/casinoRuleta.jpg');
+}*/
+
+.textAlign{
+  text-align: left;
+}
+
+.numeroApuesta a{
+  text-decoration: none;
+
+}
+.numeroApuesta li{
+  list-style: none;
+}
+.numeroApuesta li a:link{
+    color: black;
+    border: 2px solid #17A600;
+}
+
+.numeroApuesta a:hover{
+  color: red;
+}
+
+#tirar{
+  padding: 0px;
+  text-decoration-style:none;
+  color:black;
+  background-color: #17A600;
+  font: serif;
+  font-size: 15px;
+}

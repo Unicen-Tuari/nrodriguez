@@ -1,17 +1,27 @@
 "use estrict";
 
-alert('Hola');
+alert('Bienvenido al juego de la ruleta!!!');
 
+var costo=10;
 var saldo=100;
 var numeroApuesta= -1;
 var numeroRuleta=-1;
+var salio=-1;
+document.getElementById('saldo').innerHTML='$' + saldo;
+document.getElementById('numero').value="";
+
+function selectNro(nro){
+  ganancia=2*costo;
+  document.getElementById('numero').value=nro;
+  document.getElementById('valor').innerHTML=costo + '= ' + ganancia;
+}
 
 function aumentarSaldo(){
-  saldo += 10;
+  saldo += 2*costo;
 }
 
 function disminuyeSaldo(){
-   saldo -=1;
+   saldo -=10;
 }
 
 function spinRuleta(){
@@ -20,23 +30,32 @@ function spinRuleta(){
 
 function tirarRuleta(){
   numeroApuesta = document.getElementById("numero").value;
-  if (numeroApuesta >= 10 || numeroApuesta <0 || numeroApuesta==""){
-    alert('ERROR: El numero debe ser entre 0 y 9');
-    return;
+   switch(numeroApuesta){
+     case 0:{
+        alert('No tienes más saldo');
+        return;
+   }
+     case "":{
+       alert('ERROR: No se ha seleccionado un numero de la lista');
+       return;
+     }
   }
-
+  if (salio!=-1){
+    document.getElementById(salio).style.background="white";
+  }
   numeroRuleta = spinRuleta();
-  document.getElementById('ruleta').innerHTML;
-
+  document.getElementById('ruleta').innerHTML=numeroRuleta;
+  document.getElementById(numeroRuleta).style.background="red";
  if (numeroApuesta == numeroRuleta){
     alert ('Ganaste!');
     aumentarSaldo();
  }
  else{
-   alert('Segui Participando Papaaah!!!');
    disminuyeSaldo();
+   document.getElementById('numeroRuleta');
+   alert('Perdiste salio el ' + numeroRuleta + ' Saldo actual $ ' + saldo);
  }
-
-console.log ('Apostaste al: ' + numeroApuesta);
-console.log ('Saldo' + saldo);
+document.getElementById('saldo').innerHTML='$' + saldo;
+document.getElementById('numero').value="";
+salio=numeroRuleta;
 }
