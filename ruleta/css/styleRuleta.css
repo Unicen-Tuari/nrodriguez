@@ -18,8 +18,9 @@
     border: 2px solid #17A600;
 }
 
-.numeroApuesta a:hover{
-  color: red;
+.numeroApuesta li a:hover{
+  background: #17A600;
+  
 }
 
 #tirar{
