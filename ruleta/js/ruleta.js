@@ -7,11 +7,18 @@ var saldo=100;
 var numeroApuesta= -1;
 var numeroRuleta=-1;
 var salio=-1;
+var selecciono=-1;
+
 document.getElementById('saldo').innerHTML='$' + saldo;
 document.getElementById('numero').value="";
 
 function selectNro(nro){
+  document.getElementById(nro).style.background="#17A600";
   ganancia=2*costo;
+  if (selecciono!=-1){
+    document.getElementById(selecciono).style.background="white";
+  }
+  selecciono=nro;
   document.getElementById('numero').value=nro;
   document.getElementById('valor').innerHTML=costo + '= ' + ganancia;
 }
@@ -45,6 +52,7 @@ function tirarRuleta(){
   }
   numeroRuleta = spinRuleta();
   document.getElementById('ruleta').innerHTML=numeroRuleta;
+  salio=numeroRuleta;
   document.getElementById(numeroRuleta).style.background="red";
  if (numeroApuesta == numeroRuleta){
     alert ('Ganaste!');
@@ -55,7 +63,16 @@ function tirarRuleta(){
    document.getElementById('numeroRuleta');
    alert('Perdiste salio el ' + numeroRuleta + ' Saldo actual $ ' + saldo);
  }
+
 document.getElementById('saldo').innerHTML='$' + saldo;
 document.getElementById('numero').value="";
-salio=numeroRuleta;
+}
+
+function verificaSaldo(){
+  if (saldo>0){
+    tirarRuleta();
+  }
+  else{
+    alert ('No tienes más saldo');
+  }
 }
