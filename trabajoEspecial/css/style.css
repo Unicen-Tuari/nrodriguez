@@ -1,3 +1,9 @@
+html,body{
+  font-family:verdana;
+  margin: 0 auto;
+  padding: 0;
+  background-position: center;
+}
 .estilomenuhomepage a{
   text-decoration: none;
   font-size: 20px;
@@ -30,9 +36,9 @@
   border-radius: 4em/5em;
   text-align: center;
   height: 40px;
-  width: 700px;
+  width: 730px;
   position: relative;
-  left: 250px;
+  left: 300px;
 }
 
 .sizeImgIcon{
@@ -42,27 +48,19 @@
 }
 
 .positionImgIcon{
-  right: 350px;
+  right: 370px;
   position: relative;
-  height: 16px;
+  height: 10px;
 }
 
 .imghomepage{
+  height: 500px;
   background-image:url('../css/images/f1.jpg');
 }
 
 .fondopilotlist{
   background-color: grey;
 }
-
-.styleimgpilot{
-  position: absolute;
-  left: 0px;
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-}
-
 .stylelistpilot li{
   list-style: none;
 }
@@ -76,18 +74,16 @@
   display: inline-block;
 }
 
-.green{
-  opacity: 0.5;
+.contenedor{
   background-color: white;
   padding: 10px;
   overflow: hidden;
-  height: 400px;
+  height: 500px;
   padding: 0;
   margin: 0;
 }
-.blue{
-  opacity: 0,5;
-  background-color: blue;
+.perfil{
+  background-color: white;
   width: 675px;
   height: 400px;
   margin: 40px;
@@ -95,13 +91,35 @@
   margin: 0;
   padding: 0;
 }
-.red{
-  opacity: 0,5;
-  background-color: red;
+.estadisticas{
+  background-color: #F5FFFA;
   width: 675px;
   height: 400px;
   margin: 40px;
   float: right;
   margin: 0;
   padding: 0;
+}
+
+.sizeImgPilot{
+  width: 690px;
+  height: 500px;
+}
+
+.estadisticas tr{
+  height: 50px;
+}
+
+.valueStat{
+  font-weight: bold;
+  position: relative;
+  left:100px;
+}
+
+.tituloTabla{
+  font-family:sans-serif;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
 }
