@@ -1,22 +1,3 @@
-.cabeceraCalendario{
-  text-align: center;
-}
-
-.sizeMenu{
-  width: 800px;
-  position: relative;
-  left: 200px;
-}
-
-.tituloMes{
-color: #ffffff;
-font-size: 10px;
-font-weight:bold;
-line-height: 21px;
-text-transform: uppercase;
-visibility: visible;
-}
-
 .estilomenuhomepage a{
   text-decoration: none;
   font-size: 20px;
@@ -48,17 +29,19 @@ visibility: visible;
   background-color: black;
   border-radius: 4em/5em;
   text-align: center;
+  height: 40px;
+  width: 700px;
+  position: relative;
+  left: 250px;
 }
 
-
-dl,dd,dt{
-  display:inline;
-  margin-left: auto;
+.sizeMenu {
+ text-align: center;
 }
 
 .sizeImg{
     image-resolution: 10dpi;
-    width: 5%;
+    width: 6%;
     height: 40px;
 }
 
@@ -95,4 +78,62 @@ dl,dd,dt{
 
 .stylelistpilot ul{
   display: inline-block;
+}
+
+.tablaDePosiciones{
+  width: 100px;
+  opacity: 0.5;
+  background-color: white;
+}
+
+.estiloPerfil{
+  background-color: white;
+}
+
+.posicionTabla{
+  position: relative;
+  margin-left: 530px;
+  margin-bottom: 0px;
+}
+
+.achicaDiv{
+  padding-right: 0px;
+  margin-right: 0px;
+  border-right: 0px;
+}
+
+.achivaDivTabla{
+  padding-right: 0px;
+  margin-right: 0px;
+  border-right: 0px;
+}
+
+.green{
+  opacity: 0.5;
+  background-color: green;
+  width: 800px;
+  height: 600px;
+  align-items: center;
+ display:inline-block;
+ align-items: center;
+}
+.blue{
+  opacity: 0,5;
+  background-color: blue;
+  width: 200px;
+  height: 100px;
+  float: left;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.red{
+  opacity: 0,5;
+  background-color: red;
+  width: 200px;
+  height: 100px;
+  float: left;
+  padding: 0;
+  border: 0;
+  margin: 0;
 }
