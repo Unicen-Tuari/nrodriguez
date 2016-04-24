@@ -35,17 +35,13 @@
   left: 250px;
 }
 
-.sizeMenu {
- text-align: center;
-}
-
-.sizeImg{
+.sizeImgIcon{
     image-resolution: 10dpi;
     width: 6%;
     height: 40px;
 }
 
-.positionImg{
+.positionImgIcon{
   right: 350px;
   position: relative;
   height: 16px;
@@ -59,16 +55,16 @@
   background-color: grey;
 }
 
-.stylelistpilot li{
-  list-style: none;
-}
-
 .styleimgpilot{
   position: absolute;
   left: 0px;
   height: 150px;
   width: 150px;
   margin: 10px;
+}
+
+.stylelistpilot li{
+  list-style: none;
 }
 
 .stylelistpilot a{
@@ -80,60 +76,32 @@
   display: inline-block;
 }
 
-.tablaDePosiciones{
-  width: 100px;
-  opacity: 0.5;
-  background-color: white;
-}
-
-.estiloPerfil{
-  background-color: white;
-}
-
-.posicionTabla{
-  position: relative;
-  margin-left: 530px;
-  margin-bottom: 0px;
-}
-
-.achicaDiv{
-  padding-right: 0px;
-  margin-right: 0px;
-  border-right: 0px;
-}
-
-.achivaDivTabla{
-  padding-right: 0px;
-  margin-right: 0px;
-  border-right: 0px;
-}
-
 .green{
   opacity: 0.5;
-  background-color: green;
-  width: 800px;
-  height: 600px;
-  align-items: center;
- display:inline-block;
- align-items: center;
+  background-color: white;
+  padding: 10px;
+  overflow: hidden;
+  height: 400px;
+  padding: 0;
+  margin: 0;
 }
 .blue{
   opacity: 0,5;
   background-color: blue;
-  width: 200px;
-  height: 100px;
+  width: 675px;
+  height: 400px;
+  margin: 40px;
   float: left;
-  padding: 0;
-  border: 0;
   margin: 0;
+  padding: 0;
 }
 .red{
   opacity: 0,5;
   background-color: red;
-  width: 200px;
-  height: 100px;
-  float: left;
-  padding: 0;
-  border: 0;
+  width: 675px;
+  height: 400px;
+  margin: 40px;
+  float: right;
   margin: 0;
+  padding: 0;
 }
