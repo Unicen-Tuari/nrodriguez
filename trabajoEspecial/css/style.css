@@ -76,34 +76,35 @@ html,body{
 
 .contenedor{
   background-color: white;
-  padding: 10px;
   overflow: hidden;
-  height: 500px;
-  padding: 0;
-  margin: 0;
+  height: 450px;
+  width: 1110px;
+  padding: 0px/*Top-Arriba*/ 0px/*Right-Derecha*/ 0px /*Bottom-Abajo*/ 0px/*Left-Izquierda*/ ;
+  margin-left: 10px;
+  position: relative;
+  left: 150px;
 }
 .perfil{
-  background-color: white;
-  width: 675px;
-  height: 400px;
-  margin: 40px;
+  background: white;
+  width: 400px;
+  height: 350px;
   float: left;
-  margin: 0;
-  padding: 0;
+  padding: 0px 0px 0px 0px;
+  margin: 10px 10px 0px 20px;
 }
 .estadisticas{
   background-color: #F5FFFA;
-  width: 675px;
+  width: 650px;
   height: 400px;
-  margin: 40px;
   float: right;
-  margin: 0;
-  padding: 0;
+  padding: 0px 0px 0px 20px;
+  margin: 10px 10px 0px 0px;
 }
 
 .sizeImgPilot{
-  width: 690px;
-  height: 500px;
+  width: 400px;
+  height: 350px;
+  float: right;
 }
 
 .estadisticas tr{
@@ -122,4 +123,21 @@ html,body{
   font-weight: bold;
   font-style: italic;
   text-decoration: underline;
+}
+
+.perfil span{
+  white-space: pre-wrap;
+}
+
+.namePilot{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.nroPais{
+  font-size: 35px;
+}
+
+.sizeImgPais{
+  width: 35px;
 }
