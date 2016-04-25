@@ -11,32 +11,40 @@
      <div class="positionImgIcon"><img class="sizeImgIcon" src="css/images/f1icon.png" alt="f1icon" /></div>
      <li><a href="homepage.html">Home</a></li>
      <li><a href="pilotos-list.html">Pilotos</a></li>
-     <li><a href="#Autos">Autos</a></li>
      <li><a href="posiciones.html">Posiciones</a></li>
-     <li><a href="#Novedades">Novedades</a></li>
      <li><a href="encuesta.html">Encuestas</a></li>
    </ul>
   </div>
-  <h1>Encuesta</h1>
-  <div class="containerForm1">
-      <form class="" action="index.html" method="post">
-        <p  id="preg1">
-             ¿Te parece que Lewis Hamilton pueda
-             alcanzar a su compañero de equipo Nico Rosberg?
-        </p>
-       <div class="positionButton">
-        <input  class="button buttonSino" type="button" name="sino" value="Si">
-        <input  class="button buttonSino"type="button" name="sino" value="No">
-      </div>
-      </form>
-  </div>
-  <div class=containerForm2>
-      <form class="" action="index.html" method="post">
+  <div class="containerEncuesta">
+    <h1>Encuesta</h1>
+      <div class="containerForm1">
+        <form action="index.html" method="post">
+         <div class="question">
           <p>
-            ¿Cuál es tu escuderia Favorita?
-
+              ¿Te parece que Lewis Hamilton pueda
+              alcanzar a su compañero de equipo Nico Rosberg?
           </p>
-      </form>
+          </div>
+          <div class="positionButtonSino">
+            <input  class="button buttonSino" type="button" name="sino" value="Si">
+            <input  class="button buttonSino"type="button" name="sino" value="No">
+            <div class="posButtonSend"><input type="button" name="enviar" value="Enviar"></div>
+          </div>
+        </form>
+      </div>
+        <div class=containerForm2>
+               <form action="index.html" method="post">
+                  <div class="question">
+                      <p>¿Cuál es tu escuderia Favorita?</p>
+                  </div>
+                    <input  class="button buttonFerrari" type="button" name="ferrari" value="Ferrari">
+                    <input  class="button buttonRenault" type="button" name="renault" value="Renault">
+                    <input  class="button buttonMercedes"type="button" name="mercedes"value="Mercedes">
+                    <input  class="button buttonMclaren" type="button" name="mclaren" value="Mclaren">
+                    <input  class="button buttonRedBull" type="button" name="redBull" value="Red Bull">
+                    <input  class="button buttonToroRosso"type="button"name="rosso"   value="Toro Rosso">
+               </form><!--Cierra el segundo formulario-->
+        </div><!--Cierra el div del cual esta el formulario2-->
   </div>
   </body>
 </html>
