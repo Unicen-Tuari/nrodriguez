@@ -54,7 +54,7 @@ html,body{
 }
 
 .imghomepage{
-  height: 500px;
+  height: 800px;
   background-image:url('../css/images/f1.jpg');
 }
 
@@ -140,4 +140,107 @@ html,body{
 
 .sizeImgPais{
   width: 35px;
+}
+
+.containerAchievents{
+  background: white;
+  opacity: 0.7;
+  overflow: hidden;
+}
+
+.listAchievents{
+  float: left;
+}
+
+.headListAchievents{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.listAchievents li{
+  list-style:square
+}
+
+.sizeImgcup{
+  width: 200px;
+  height: 325px;
+  float: right;
+  margin-right: 200px;
+}
+
+.posicionesTab{
+  background-color: white;
+  border-collapse: collapse;
+}
+
+th,td{
+  text-align: left;
+  padding: 10px 50px 0px 0px;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}
+
+.center{
+  text-align: center;
+}
+
+.tablePosition{
+  width:1110px;
+  height: 450px;
+  position: relative;
+  left: 300px;
+}
+
+ .posicionesTab tr:nth-child(even){background-color: #f2f2f2}
+
+#styleTittlePos{
+  background-color: black;
+  color: white;
+  width: 635px;
+}
+
+.containerForm{
+  background: white;
+  opacity: 0,6;
+  width: 500px;
+  height: 500px;
+}
+
+.containerForm{
+  background: black;
+  color: white;
+  opacity: 0.7;
+  margin: 20px 20px 20px 20px;
+  height: 300px;
+}
+
+#preg1{
+  font-size: 25px;
+}
+
+.button{
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.buttonSino{
+  background-color: white;
+  color: black;
+  border: 0px 0px 0px 0px solid red;
+  margin: 0px 1px 0px 0px;
+  width: 200px;
+}
+
+.buttonSino:hover{
+  background-color: red;
+  color:white;
+}
+
+.positionButton{
+  position: relative;
+  left: 45px;
 }
