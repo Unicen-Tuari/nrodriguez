@@ -24,7 +24,7 @@ html,body{
 .estilomenuhomepage li{
   list-style: none;
   display: inline;
-  margin: 10px;
+  margin: 10px 5px 10px 40px;
   font-style:normal;
   letter-spacing: 1px;
   font-size: 20px;
@@ -34,21 +34,20 @@ html,body{
 .estilomenuhomepage{
   background-color: black;
   border-radius: 4em/5em;
-  text-align: center;
   height: 40px;
-  width: 730px;
+  width: 570px;
   position: relative;
-  left: 300px;
+  left: 380px;
 }
 
 .sizeImgIcon{
     image-resolution: 10dpi;
-    width: 6%;
+    width: 8%;
     height: 40px;
 }
 
 .positionImgIcon{
-  right: 370px;
+  right: 30px;
   position: relative;
   height: 10px;
 }
@@ -56,6 +55,57 @@ html,body{
 .imghomepage{
   height: 800px;
   background-image:url('../css/images/f1.jpg');
+}
+
+.containerNovedades{
+  margin-top: 200px;
+}
+
+.containerNews{
+  background: white;
+  width: 560px;
+  height: 130px;
+  position: relative;
+  left:395px;
+  margin: 4px 0px 0px 0px;
+}
+
+.containerNews h2{
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.containerNews p{
+  font-size: 15px;
+}
+
+.posImgNoticia{
+  float:left;
+}
+
+.titulo{
+  background: white;
+  float:left;
+  width: 360px;
+  height: 130px;
+}
+.titulo a:link{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.titulo a:active{
+  color:black;
+}
+
+.titulo a:visited{
+  color:black;
+}
+
+.sizeImgNoticia{
+  width: 200px;
+  height: 130px;
 }
 
 .fondopilotlist{
@@ -203,17 +253,31 @@ th,td{
   background: black;
   color: white;
   opacity: 0.7;
-  margin: 20px 20px 20px 20px;
+  margin: 20px 0px 5px 20px;
   height: 250px;
   width: 500px;
+  float: left;
 }
 
-#preg1{
+.containerForm2{
+  text-align: left;
+  color:white;
+  background: black;
+  opacity: 0.7;
+  float:left;
+  width: 450px;
+  height: 350px;
+  margin: 20px 0px 0px 20px;
+}
+
+.question p{
   font-size: 25px;
+  margin-left: 10px;
 }
 
 .button{
-  border: none;
+  margin-bottom: 5px;
+  border: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -227,6 +291,7 @@ th,td{
   border: 0px 0px 0px 0px solid red;
   margin: 0px 1px 0px 0px;
   width: 200px;
+  border: 100px;
 }
 
 .buttonSino:hover{
@@ -234,7 +299,25 @@ th,td{
   color:white;
 }
 
-.positionButton{
+.positionButtonSino{
   position: relative;
   left: 45px;
+}
+
+.posButtonSend{
+  font-size: 15;
+  padding-top: 20px;
+  position: relative;
+  left:173px;
+}
+
+.buttonFerrari:hover{
+  background-color: red;
+  color:white;
+}
+
+.buttonFerrari{
+  background-color: white;
+  color: black;
+  position: relative;
 }
