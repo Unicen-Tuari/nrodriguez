@@ -1,9 +1,13 @@
+/*Aca empieza el estilo por defecto
+que usa los html del menu
+(encuesta,homepage,pilotos-list,posiciones)*/
 html,body{
   font-family:verdana;
-  margin: 0 auto;
-  padding: 0;
+  margin: 0px auto;
+  padding: 0px;
   background-position: center;
 }
+
 .estilomenuhomepage a{
   text-decoration: none;
   font-size: 20px;
@@ -55,10 +59,47 @@ html,body{
 .imghomepage{
   height: 800px;
   background-image:url('../css/images/f1.jpg');
+  background-repeat: no-repeat;
 }
 
+.containerLatestNews{
+   margin:20px 0px 0px 0px;
+   width: 1000px;
+   height: 150px;
+   position: relative;
+   left:150px;
+}
+
+.box1{
+    width: 200px;
+    height: 150px;
+    float:left;
+}
+
+.sizeImgCircuit{
+  width: 200px;
+  height: 150px;
+}
+
+.box2{
+  width: 400px;
+  height: 150px;
+  background: blue;
+  opacity: 0.5;
+  float: left;
+}
+
+.box3{
+  width: 400px;
+  height: 150px;
+  background: red;
+  opacity: 0.5;
+  float: left;
+}
+/*Aca comienza los estilos que usa solo
+  el homepage*/
 .containerNovedades{
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 .containerNews{
@@ -108,9 +149,7 @@ html,body{
   height: 130px;
 }
 
-.fondopilotlist{
-  background-color: grey;
-}
+/*Aca arranca los estilos para pilots-list.html*/
 .stylelistpilot li{
   list-style: none;
 }
@@ -123,6 +162,9 @@ html,body{
 .stylelistpilot ul{
   display: inline-block;
 }
+
+/*Aca comienzan los estilos para los
+perfiles de los pilotos*/
 
 .contenedor{
   background-color: white;
@@ -142,6 +184,30 @@ html,body{
   padding: 0px 0px 0px 0px;
   margin: 10px 10px 0px 20px;
 }
+
+.perfil span{
+  white-space: pre-wrap;
+}
+
+.sizeImgPilot{
+  width: 400px;
+  height: 350px;
+  float: right;
+}
+
+.nroPais{
+  font-size: 35px;
+}
+
+.sizeImgPais{
+  width: 35px;
+}
+
+.namePilot{
+  font-size: 40px;
+  font-weight: bold;
+}
+
 .estadisticas{
   background-color: #F5FFFA;
   width: 650px;
@@ -151,20 +217,8 @@ html,body{
   margin: 10px 10px 0px 0px;
 }
 
-.sizeImgPilot{
-  width: 400px;
-  height: 350px;
-  float: right;
-}
-
 .estadisticas tr{
   height: 50px;
-}
-
-.valueStat{
-  font-weight: bold;
-  position: relative;
-  left:100px;
 }
 
 .tituloTabla{
@@ -175,21 +229,10 @@ html,body{
   text-decoration: underline;
 }
 
-.perfil span{
-  white-space: pre-wrap;
-}
-
-.namePilot{
-  font-size: 40px;
+.valueStat{
   font-weight: bold;
-}
-
-.nroPais{
-  font-size: 35px;
-}
-
-.sizeImgPais{
-  width: 35px;
+  position: relative;
+  left:100px;
 }
 
 .containerAchievents{
@@ -202,13 +245,13 @@ html,body{
   float: left;
 }
 
+.listAchievents li{
+  list-style:square
+}
+
 .headListAchievents{
   font-weight: bold;
   text-decoration: underline;
-}
-
-.listAchievents li{
-  list-style:square
 }
 
 .sizeImgcup{
@@ -218,9 +261,29 @@ html,body{
   margin-right: 200px;
 }
 
+/*Aca comienzan los estilos para
+posiciones.html*/
+
+.tablePosition{
+  width: 1110px;
+  height: 450px;
+  position: relative;
+  left: 300px;
+}
+
+#styleTittlePos{
+  background-color: black;
+  color: white;
+  width: 635px;
+}
+
 .posicionesTab{
   background-color: white;
   border-collapse: collapse;
+}
+
+.center{
+  text-align: center;
 }
 
 th,td{
@@ -229,25 +292,10 @@ th,td{
   border-bottom: 1px solid black;
   border-collapse: collapse;
 }
-
-.center{
-  text-align: center;
-}
-
-.tablePosition{
-  width:1110px;
-  height: 450px;
-  position: relative;
-  left: 300px;
-}
-
  .posicionesTab tr:nth-child(even){background-color: #f2f2f2}
 
-#styleTittlePos{
-  background-color: black;
-  color: white;
-  width: 635px;
-}
+/*Aca comienzan los estilos para
+encuesta.html*/
 
 .containerForm1{
   background: black;
@@ -259,20 +307,14 @@ th,td{
   float: left;
 }
 
-.containerForm2{
-  text-align: left;
-  color:white;
-  background: black;
-  opacity: 0.7;
-  float:left;
-  width: 450px;
-  height: 350px;
-  margin: 20px 0px 0px 20px;
-}
-
-.question p{
+.question{
   font-size: 25px;
   margin-left: 10px;
+}
+
+.positionButtonSino{
+  position: relative;
+  left: 45px;
 }
 
 .button{
@@ -285,6 +327,7 @@ th,td{
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
 .buttonSino{
   background-color: white;
   color: black;
@@ -299,11 +342,6 @@ th,td{
   color:white;
 }
 
-.positionButtonSino{
-  position: relative;
-  left: 45px;
-}
-
 .posButtonSend{
   font-size: 15;
   padding-top: 20px;
@@ -311,13 +349,23 @@ th,td{
   left:173px;
 }
 
-.buttonFerrari:hover{
-  background-color: red;
-  color:white;
+.containerForm2{
+  text-align: left;
+  background: black;
+  opacity: 0.7;
+  float:left;
+  width: 450px;
+  height: 350px;
+  margin: 20px 0px 0px 20px;
 }
 
 .buttonFerrari{
   background-color: white;
   color: black;
   position: relative;
+}
+
+.buttonFerrari:hover{
+  background-color: red;
+  color:white;
 }
