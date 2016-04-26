@@ -84,18 +84,27 @@ html,body{
 .box2{
   width: 400px;
   height: 150px;
-  background: blue;
-  opacity: 0.5;
+  background: white;
   float: left;
+}
+
+.sizeImgClima{
+  width: 400px;
+  height: 150px;
 }
 
 .box3{
   width: 400px;
   height: 150px;
-  background: red;
-  opacity: 0.5;
+  background: white;
   float: left;
 }
+
+.sizeImgParrilla{
+  width: 400px;
+  height: 150px;
+}
+
 /*Aca comienza los estilos que usa solo
   el homepage*/
 .containerNovedades{
@@ -267,9 +276,10 @@ perfiles de los pilotos*/
 
 .sizeImgcup{
   width: 200px;
-  height: 325px;
+  height: 280px;
   float: right;
   margin-right: 200px;
+  margin-top: 30px;
 }
 
 /*Aca comienzan los estilos para
