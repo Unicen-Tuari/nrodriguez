@@ -70,43 +70,45 @@ html,body{
    left:150px;
 }
 
-.box1{
-    width: 200px;
-    height: 150px;
-    float:left;
-}
-
-.sizeImgCircuit{
-  width: 200px;
-  height: 150px;
-}
-
-.box2{
-  width: 400px;
-  height: 150px;
-  background: white;
-  float: left;
-}
-
-.sizeImgClima{
-  width: 400px;
-  height: 150px;
-}
-
-.box3{
-  width: 400px;
-  height: 150px;
-  background: white;
-  float: left;
-}
-
-.sizeImgParrilla{
-  width: 400px;
-  height: 150px;
-}
 
 /*Aca comienza los estilos que usa solo
   el homepage*/
+
+  .box1{
+      width: 200px;
+      height: 150px;
+      float:left;
+  }
+
+  .sizeImgCircuit{
+    width: 200px;
+    height: 150px;
+  }
+
+  .box2{
+    width: 400px;
+    height: 150px;
+    background: white;
+    float: left;
+  }
+
+  .sizeImgClima{
+    width: 400px;
+    height: 150px;
+  }
+
+  .box3{
+    width: 400px;
+    height: 150px;
+    background: white;
+    float: left;
+  }
+
+  .sizeImgParrilla{
+    width: 400px;
+    height: 150px;
+  }
+
 .containerNovedades{
   margin-top: 20px;
 }
