@@ -318,19 +318,31 @@ th,td{
 /*Aca comienzan los estilos para
 encuesta.html*/
 
+.encuesta{
+  width: 1200px;
+  height: 700px;
+  opacity: 0.9;
+  background: white;
+  display: inline-block;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 0px 0px 0px 0px;
+}
+
 .containerForm1{
   background: black;
-  color: white;
   opacity: 0.7;
-  margin: 20px 0px 5px 20px;
+  margin: 0px 0px 0px 0px;
   height: 250px;
   width: 500px;
-  float: left;
+  display: inline-block;
 }
 
 .question{
   font-size: 25px;
   margin-left: 10px;
+  color: white;
 }
 
 .positionButtonSino{
@@ -338,24 +350,33 @@ encuesta.html*/
   left: 45px;
 }
 
-.button{
-  margin-bottom: 5px;
-  border: 5px;
+.buttonQ1{
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 30px;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
+.buttonQ2{
+  border: none;
+  width: 140px;
+  margin: 0px 0px 0px 0px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 25px;
+  transition-duration: 0.4s;
+  padding: 0px 0px 0px 0px;
+}
+
+.buttonSend{
+  position: relative;
+  left: 0px;
+  margin-top: 20px;
+}
+
 .buttonSino{
-  background-color: white;
-  color: black;
-  border: 0px 0px 0px 0px solid red;
-  margin: 0px 1px 0px 0px;
   width: 200px;
-  border: 100px;
 }
 
 .buttonSino:hover{
@@ -365,28 +386,142 @@ encuesta.html*/
 
 .posButtonSend{
   font-size: 15;
-  padding-top: 20px;
   position: relative;
   left:173px;
 }
 
 .containerForm2{
-  text-align: left;
+  text-align: center;
   background: black;
   opacity: 0.7;
-  float:left;
+  display: inline-block;
   width: 450px;
-  height: 350px;
-  margin: 20px 0px 0px 20px;
+  height: 300px;
+  margin: 10px 10px 10px 10px;
+
 }
 
 .buttonFerrari{
-  background-color: white;
-  color: black;
-  position: relative;
+  background-color:white;
+  border: 2px solid red;
 }
 
 .buttonFerrari:hover{
   background-color: red;
   color:white;
+}
+
+.buttonRenault{
+  color: black;
+  background-color:white;
+  border: 2px solid yellow;
+}
+
+.buttonRenault:hover{
+  background-color: black;
+  color:white;
+}
+
+.buttonMercedes{
+  background-color:white;
+  border: 2px solid #16D891;
+}
+
+.buttonMercedes:hover{
+  background-color: grey;
+  color:white;
+}
+
+.buttonMclaren{
+  background-color:white;
+  border: 2px solid red;
+}
+
+.buttonMclaren:hover{
+  background-color: black;
+  color:red;
+}
+
+.buttonRedBull{
+  background-color:white;
+  border: 2px solid blue;
+}
+
+.buttonRedBull:hover{
+  background-color: red;
+  color:yellow;
+}
+
+.buttonToroRosso{
+  background-color:white;
+  border: 2px solid yellow;
+}
+
+.buttonToroRosso:hover{
+  background-color: #20214F;
+  color:red;
+}
+
+.buttonManor{
+  background-color:white;
+  border: 2px solid blue;
+}
+
+.buttonManor:hover{
+  background-color: red;
+  color:white;
+}
+
+.buttonForceIndia{
+  background-color:white;
+  border: 2px solid grey;
+}
+
+.buttonForceIndia:hover{
+  background-color: black;
+  color:orange;
+}
+
+.buttonSauber{
+    background-color:white;
+    border: 2px solid white;
+  }
+
+  .buttonSauber:hover{
+    background-color: blue;
+    color:yellow;
+}
+
+.buttonHaas{
+    background-color:white;
+    border: 2px solid red;
+  }
+
+  .buttonHaas:hover{
+    background-color: black;
+    color:grey;
+}
+
+.buttonWilliams{
+    background-color:white;
+    border: 2px solid #008CBA;
+  }
+
+  .buttonWilliams:hover{
+    background-color: white;
+    color:#008CBA;
+}
+
+.containerForm3{
+ margin: 0px 10px 0px 0px;
+ background: black;
+ width: 500px;
+ height: 150px;
+ position: relative;
+ display: inline-block;
+ opacity: 0.7;
+}
+
+.select{
+  color: white;
 }

@@ -15,10 +15,10 @@
      <li><a href="encuesta.html">Encuestas</a></li>
    </ul>
   </div>
-  <div>
-    <h1>Encuesta</h1>
+  <div><h1>Encuesta</h1></div>
+  <div class="encuesta">
       <div class="containerForm1">
-        <form action="index.html" method="post">
+        <form action="encuesta.html" method="post">
          <div class="question">
           <p>
               ¿Te parece que Lewis Hamilton pueda
@@ -26,24 +26,49 @@
           </p>
           </div>
           <div class="positionButtonSino">
-            <input  class="button buttonSino" type="button" name="sino" value="Si">
-            <input  class="button buttonSino"type="button" name="sino" value="No">
-            <div class="posButtonSend"><input type="button" name="enviar" value="Enviar"></div>
+            <input  class="buttonQ1 buttonSino" type="button" name="sino" value="Si">
+            <input  class="buttonQ1 buttonSino"type="button" name="sino" value="No">
+            <div class="posButtonSend"><input type="submit" name="enviar" value="Enviar"></div>
           </div>
         </form>
       </div>
-        <div class=containerForm2>
-               <form action="index.html" method="post">
+        <div class="containerForm2">
+               <form action="encuesta.html" method="post">
                   <div class="question">
                       <p>¿Cuál es tu escuderia Favorita?</p>
                   </div>
-                    <input  class="button buttonFerrari" type="button" name="ferrari" value="Ferrari">
-                    <input  class="button buttonRenault" type="button" name="renault" value="Renault">
-                    <input  class="button buttonMercedes"type="button" name="mercedes"value="Mercedes">
-                    <input  class="button buttonMclaren" type="button" name="mclaren" value="Mclaren">
-                    <input  class="button buttonRedBull" type="button" name="redBull" value="Red Bull">
-                    <input  class="button buttonToroRosso"type="button"name="rosso"   value="Toro Rosso">
+                  <div class="positionButtonMar">
+                    <input  class="buttonQ2 buttonFerrari" type="button" name="ferrari" value="Ferrari">
+                    <input  class="buttonQ2 buttonRenault" type="button" name="renault" value="Renault">
+                    <input  class="buttonQ2 buttonMercedes"type="button" name="mercedes"value="Mercedes">
+                    <input  class="buttonQ2 buttonMclaren" type="button" name="mclaren" value="Mclaren">
+                    <input  class="buttonQ2 buttonRedBull" type="button" name="redBull" value="Red Bull">
+                    <input  class="buttonQ2 buttonToroRosso"type="button"name="Toro Rosso"   value="Toro Rosso">
+                    <input  class="buttonQ2 buttonManor"   type="button"name="Manor"   value="Manor">
+                    <input  class="buttonQ2 buttonForceIndia"type="button"name="forceIndia"  value="Force India">
+                    <input  class="buttonQ2 buttonSauber"type="button"name="sauber"   value="Sauber">
+                    <input  class="buttonQ2 buttonHaas"type="button"name="haas"   value="Haas">
+                    <input  class="buttonQ2 buttonWilliams"type="button"name="williams"   value="Williams">
+                  </div>
+                  <input  class="buttonQ2 buttonSend"type="submit" value="Enviar">
                </form>
+        </div>
+        <div class="containerForm3">
+           <form action="encuesta.html" method="post">
+             <div class="question">
+               <p>
+                 ¿Que piloto de F1 consiguio salir campeón del mundo en el año 2010?
+               </p>
+             </div>
+             <div class="positionButtonPilot">
+               <form class="" action="index.html" method="post">
+                 <span class="select">Lewis Hamilton</span><input class="buttonQ2" type="radio" name="Lewis" value="Lewis Hamilton">
+                 <span class="select">Sebastian Vettel</span><input class="buttonQ2" type="radio" name="Sebastias" value="Sebastian Vettel">
+                 <span class="select">Felipe Massa</span><input class="buttonQ2" type="radio" name="Felipe" value="Felipe Massa">
+                 <input type="submit" name="enviar" value="Enviar">
+               </form>
+             </div>
+           </form>
         </div>
   </div>
   </body>
