@@ -6,6 +6,8 @@ html,body{
   margin: 0px auto;
   padding: 0px;
   background-position: center;
+  background-image:url('../css/images/f1.jpg');
+  background-repeat: no-repeat;
 }
 
 .estilomenuhomepage a{
@@ -56,12 +58,6 @@ html,body{
   height: 10px;
 }
 
-.imghomepage{
-  height: 800px;
-  background-image:url('../css/images/f1.jpg');
-  background-repeat: no-repeat;
-}
-
 .containerLatestNews{
    margin:20px 0px 0px 0px;
    width: 1000px;
@@ -74,7 +70,7 @@ html,body{
 /*Aca comienza los estilos que usa solo
   el homepage*/
 
-  .box1{
+  .proxCircuito{
       width: 200px;
       height: 150px;
       float:left;
@@ -85,7 +81,7 @@ html,body{
     height: 150px;
   }
 
-  .box2{
+  .dateClima{
     width: 400px;
     height: 150px;
     background: white;
@@ -97,7 +93,7 @@ html,body{
     height: 150px;
   }
 
-  .box3{
+  .imgParrilla{
     width: 400px;
     height: 150px;
     background: white;
@@ -315,10 +311,16 @@ th,td{
   border-bottom: 1px solid black;
   border-collapse: collapse;
 }
- .posicionesTab tr:nth-child(even){background-color: #f2f2f2}
+ .posicionesTab tr:nth-child(even){
+   background-color: #f2f2f2
+ }
 
 /*Aca comienzan los estilos para
 encuesta.html*/
+
+.centrado{
+  margin: 0 auto;
+}
 
 .encuesta{
   width: 1200px;
@@ -335,10 +337,11 @@ encuesta.html*/
 .containerForm1{
   background: black;
   opacity: 0.7;
-  margin: 0px 0px 0px 0px;
+  margin: 10px 10px 10px 10px;
   height: 250px;
   width: 500px;
   display: inline-block;
+  float: left;
 }
 
 .question{
@@ -400,7 +403,6 @@ encuesta.html*/
   width: 450px;
   height: 300px;
   margin: 10px 10px 10px 10px;
-
 }
 
 .buttonFerrari{
