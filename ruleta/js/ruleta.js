@@ -14,17 +14,17 @@ document.getElementById('numero').value="";
 
 function selectNro(nro){
   document.getElementById(nro).style.background="#17A600";
-  ganancia=2*costo;
+  ganancia=2*nro;
   if (selecciono!=-1){
     document.getElementById(selecciono).style.background="white";
   }
   selecciono=nro;
   document.getElementById('numero').value=nro;
-  document.getElementById('valor').innerHTML=costo + '= ' + ganancia;
+  document.getElementById('valor').innerHTML=nro + '= ' + ganancia;
 }
 
-function aumentarSaldo(){
-  saldo += 2*costo;
+function aumentarSaldo(numeroApuesta){
+  saldo += 2*numeroApuesta;
 }
 
 function disminuyeSaldo(){
@@ -56,7 +56,7 @@ function tirarRuleta(){
   document.getElementById(numeroRuleta).style.background="red";
  if (numeroApuesta == numeroRuleta){
     alert ('Ganaste!');
-    aumentarSaldo();
+    aumentarSaldo(numeroApuesta);
  }
  else{
    disminuyeSaldo();
