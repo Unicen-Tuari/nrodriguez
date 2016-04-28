@@ -159,6 +159,17 @@ html,body{
 /*Aca arranca los estilos para pilots-list.html*/
 .stylelistpilot li{
   list-style: none;
+  margin-top: 5px;
+  border: 1px solid black;
+  background: white;
+  width: 200px;
+  text-align: center;
+}
+
+.stylelistpilot li:hover{
+  font-style: italic;
+  font-size: 17px;
+  background: orange;
 }
 
 .stylelistpilot a{
