@@ -1,4 +1,4 @@
-"use estrict";
+"use strict";
 
 alert('Bienvenido al juego de la ruleta!!!');
 
