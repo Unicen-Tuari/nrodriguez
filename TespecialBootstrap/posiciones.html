@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formula 1</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fonts/style.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css" media="screen" charset="utf-8">
+</head>
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a href="#"><img class="posSizeLogo" src="./css/images/f1icon.png" alt="" /></a>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#">Pilotos</a></li>
+                <li><a href="posiciones.html">Posiciones</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+
+<div class="container form">
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Ranking">Ranking:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="posicion" placeholder="Posicion">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Piloto:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="nombre"  placeholder="Nombre y Apellido">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Nacionalidad:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="nacionalidad"  placeholder="Nacionalidad">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Equipo:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="equipo"  placeholder="Equipo">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Puntos:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="puntos"  placeholder="Puntos">
+      </div>
+    </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Guardar</button>
+        </div>
+    </div>
+  </form>
+</div>
+  </body>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/informacion.js"></script>
+</html>
