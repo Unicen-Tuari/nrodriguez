@@ -22,3 +22,20 @@ h1{
   border-style: solid;
   background-color: white;
 }
+
+table{
+  border-collapse: collapse;
+}
+
+table,th,td{
+  border: black;
+  border-style: solid;
+}
+
+th{
+  color:blue;
+}
+
+tbody{
+font-style: italic;
+}
