@@ -8,3 +8,8 @@ h1{
 .signos{
   color: green;
 }
+
+.list-drink{
+  list-style: circle;
+  color: red;
+}
