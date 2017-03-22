@@ -13,3 +13,12 @@ h1{
   list-style: circle;
   color: red;
 }
+
+.resaltado{
+  font-weight: bold;
+}
+
+.container{
+  border-style: solid;
+  background-color: white;
+}
