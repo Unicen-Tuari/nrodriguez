@@ -39,3 +39,37 @@ th{
 tbody{
 font-style: italic;
 }
+
+a:hover{
+  color:darkblue;
+  background-color: #eee;
+}
+
+p::first-letter{
+  color: red;
+  background-color: black;
+}
+
+/*input[type=checkbox]:checked{
+  -webkit-appareance:button;
+}*/
+
+p.destacado::-moz-selection{
+  background-color: red;
+  color: white;
+}
+
+p.destacado::selection{
+  background-color: red;
+  color: white;
+}
+
+span.resaltado::selection{
+  background-color;
+  color: white;
+}
+
+span.resaltado::-moz-selection{
+  background-color:red;
+  color: white;
+}
