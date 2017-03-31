@@ -1,0 +1,25 @@
+header img{
+  display: block;
+  margin: auto;
+}
+
+header{
+  text-align: center;
+}
+
+nav ul li{
+  display: inline;
+  margin: 20px;
+}
+
+nav{
+  background-color: #1e5db2;
+  width: 848px;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+nav ul{
+  float: left;
+  padding-left: 20px;
+}
