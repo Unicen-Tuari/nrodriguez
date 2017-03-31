@@ -61,9 +61,9 @@ input[type=text] {
     font-size: 20px;
     background-color: white;
     background-image: url('../images/searchicon.png');
-    background-position: 5px 6px;
+    background-position: 4px 4px;
     background-repeat: no-repeat;
-    padding: 2px 2px 2px 40px;
+    padding: 2px 2px 3px 40px;
     -webkit-transition: width 0.4s ease-in-out;
    transition: width 0.4s ease-in-out;
 }
