@@ -9,7 +9,10 @@ header{
 
 nav ul li{
   display: inline;
-  margin: 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #94afd8;
 }
 
 nav{
@@ -22,4 +25,31 @@ nav{
 nav ul{
   float: left;
   padding-left: 20px;
+}
+
+nav a{
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+nav a:visited{
+  color: grey;
+  font-size: 20px;
+}
+
+nav a::selection{
+  background-color: black;
+}
+
+nav a:hover{
+  border-top: 2px solid darkblue;
+}
+
+nav a:focus{
+  background-color: white;
+}
+
+nav span{
+  margin: 10px;
 }
