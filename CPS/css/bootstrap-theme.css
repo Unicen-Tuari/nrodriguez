@@ -1,0 +1,135 @@
+/*header img{
+  display: block;
+  margin: auto;
+}
+
+header{
+  text-align: center;
+}
+
+nav ul li{
+  font-size: 20px;
+  font-weight: bolder;
+  color: #94afd8;
+}
+
+nav{
+  background-color: #1e5db2;
+}
+
+nav a{
+  text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+nav a:visited{
+  color: grey;
+  font-size: 20px;
+}
+
+nav a::selection{
+  background-color: black;
+}
+
+nav a:hover{
+  border-top: 2px solid darkblue;
+}
+
+nav a:focus{
+  background-color: white;
+}
+
+nav span{
+  margin: 10px;
+}
+
+input[type=text] {
+    width: 140px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    font-size: 20px;
+    background-color: white;
+    background-image: url('../images/searchicon.png');
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+    padding: 2px 2px 3px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+   transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 300px;
+}*/
+img{
+  display: block;
+  margin: auto;
+}
+
+.navbar-default{
+  background-color: #215fb3;
+}
+
+.navbar-default .navbar-brand{
+  color: #0f348c;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+  color: #0f348c;
+  background-color: white;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: black;
+  background-color: #215fb3;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a{
+  color: black;
+  background-color: #215fb3;
+}
+
+.navbar-toggle{
+  background-color: #0f348c;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+  background-color: white;
+}
+
+.dropdown-menu>li>a{
+  background-color: #4075bd;
+}
+
+.navbar-default .navbar-brand:hover{
+  background-color: white;
+}
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+  background-color: white;
+  color: #4075bd;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  background-color: white;
+  color: #4075bd;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+  background-color: white;
+}
+
+.navbar-default .navbar-nav>li>a:active{
+  background-color: white;
+}
+
+.navbar-nav>li>.dropdown-menu{
+  background-color: #4075bd;
+}
+
+.dropdown-menu .divider{
+  background-color: grey;
+}
+
+.navbar-default .navbar-nav>li>a:active{
+  background-color: white;
+}
