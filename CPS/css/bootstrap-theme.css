@@ -157,5 +157,61 @@ input[type=text]:focus {
 }
 
 .thumbnail{
-  text-align: center; 
+  text-align: center;
+}
+
+.w3-bar .w3-button {
+    background-color: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+.w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.w3-button:hover {
+    color: #000;
+    background-color: #4075bd;
+    text-decoration: none;
+}
+
+.nav-pagination{
+  border-top: 1px solid #0f348c;
+  border-bottom: 1px solid #0f348c;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.center{
+  padding-top: 10px;
+}
+
+.nav-pagination div{
+  padding-left: 40px;
+}
+
+ul.lista-producto li{
+  display: inline-block;
+  margin: 20px;
+}
+
+.encabezado{
+  background-color: lightgrey;
+  margin-bottom: 30px;
+  height: 65px;
+}
+
+.encabezado h3{
+  margin-left: 25px;
 }
