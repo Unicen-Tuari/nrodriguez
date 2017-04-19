@@ -215,3 +215,7 @@ ul.lista-producto li{
 .encabezado h3{
   margin-left: 25px;
 }
+
+.w3-bar ul li{
+  display: inline-block;
+}
