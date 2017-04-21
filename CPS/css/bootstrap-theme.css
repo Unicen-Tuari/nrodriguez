@@ -186,8 +186,8 @@ input[type=text]:focus {
 }
 
 .nav-pagination{
-  border-top: 1px solid #0f348c;
-  border-bottom: 1px solid #0f348c;
+  border-top: 2px solid #0f348c;
+  border-bottom: 2px solid #0f348c;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 30px;
@@ -201,11 +201,6 @@ input[type=text]:focus {
   padding-left: 40px;
 }
 
-ul.lista-producto li{
-  display: inline-block;
-  margin: 20px;
-}
-
 .encabezado{
   background-color: lightgrey;
   margin-bottom: 30px;
@@ -216,6 +211,30 @@ ul.lista-producto li{
   margin-left: 25px;
 }
 
-.w3-bar ul li{
-  display: inline-block;
+.filterProducts{
+  background-color: lightblue;
+  opacity: 0.7;
+}
+
+.filterProducts ul li{
+  list-style-type:none;
+  margin: 3px 3px 3px 3px;
+}
+
+
+.filterProducts ul li a{
+  text-decoration: none;
+  color: black;
+  padding: 3px 3px 3px 3px;
+}
+
+
+.filterProducts ul li a:hover{
+  text-decoration: none;
+  color: #4075bd;
+  background-color: white;
+}
+
+.filterProducts ul li.flecha{
+  list-style-image: url('./images/arrow-rigth-icon.jpg');
 }
