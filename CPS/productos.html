@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Phone Sale</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col-lg-12">
+      <img src="images/banner.png" alt="banner" class="img-responsive">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> CPS</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-nav">
+              <li><a href="productos.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Productos</a></li>
+              <li><a href="contacto.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Contacto</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" class="searchNav form-control" placeholder="Buscar Productos">
+              </div>
+              <button type="submit" class="btn btn-default">Enviar</button>
+            </form>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="filterProducts col-xs-12  col-lg-2 ">
+      <h3>Filtrar por</h3>
+     <ul>
+       <li class="flecha">MARCAS</li>
+        <ul>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">Iphone</a></li>
+          <li><a href="#">Motorola</a></li>
+          <li><a href="#">Sony</a></li>
+          <li><a href="#">Otros</a></li>
+        </ul>
+        <li class="flecha">S.O</li>
+        <ul>
+          <li><a href="#">Android</a></li>
+          <li><a href="#">Windows Phone</a></li>
+        </ul>
+        <li class="flecha">Precio</li>
+        <ul>
+          <li><a href="#">Menos de $4000</a></li>
+          <li><a href="#">Entre $4000 y $8000</a></li>
+          <li><a href="#">Más de $12000</a></li>
+        </ul>
+    </ul>
+    </div>
+    <div class="col-xs-12 col-lg-10">
+      <div class="row encabezado">
+        <h3>Equipos</h3>
+      </div>
+      <div class="nav-pagination row">
+        <div class="col-xs-12 col-lg-3 ">
+          <p class="center">Productos 12-24 de 52</p>
+        </div>
+        <div class="col-xs-6 col-lg-3">
+          <p class="center">Ordenar por</p>
+        </div>
+        <div class="col-xs-6 col- col-lg-2">
+          <p class="center">Mostrar</p>
+        </div>
+        <div class="col-xs-12 col-lg-4">
+          <div class="w3-bar">
+            <a href="#" class="w3-button">&laquo;</a>
+            <a href="#" class="w3-button">1</a>
+            <a href="#" class="w3-button">2</a>
+            <a href="#" class="w3-button">3</a>
+            <a href="#" class="w3-button">4</a>
+            <a href="#" class="w3-button">&raquo;</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Iphone 7 Plus 32GB</h3>
+            <img src="images/celulares/Iphone7plus.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$31.999</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto1" type="checkbox" name="box1" value="1"> <label for="producto1">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Iphone7 128GB</h3>
+            <img src="images/celulares/Iphone7.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$30.999</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto2" type="checkbox" name="box2" value="2"> <label for="producto2">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Iphone 6s 32GB</h3>
+            <img src="images/celulares/Iphone6s.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$22.599</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto3" type="checkbox" name="box3" value="3"> <label for="producto3">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Samsung Galaxy J2 Prime</h3>
+            <img src="images/celulares/Samsungj2.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$4.099</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto4" type="checkbox" name="box4" value="4"> <label for="producto4">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Moto G 3gen.</h3>
+            <img src="images/celulares/MotoG3gen.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$4.124</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto5" type="checkbox" name="box5" value="5"> <label for="producto5">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Huawei G620s</h3>
+            <img src="images/celulares/Huawei.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$4.124</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto6" type="checkbox" name="box6" value="6"> <label for="producto6">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Sony Xperia X</h3>
+            <img src="images/celulares/SonyX.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$14.999</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto7" type="checkbox" name="box7" value="7"> <label for="producto7">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Samsung Galaxy A9</h3>
+            <img src="images/celulares/SamsungA9.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$14.999</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto8" type="checkbox" name="box8" value="8"> <label for="producto8">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>LG 4 Stylus</h3>
+            <img src="images/celulares/LGStylus.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$5.474</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto9" type="checkbox" name="box9" value="9"> <label for="producto9">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Moto G 4Gen. Plus</h3>
+            <img src="images/celulares/MotoG4gen.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$8.899</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto10" type="checkbox" name="box10" value="10"> <label for="producto10">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>LG K8</h3>
+            <img src="images/celulares/LGK8.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$4.199</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto11" type="checkbox" name="box11" value="11"> <label for="producto11">Comparar</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <div class="thumbnail">
+            <h3>Sony Xperia M5 + Auriculares</h3>
+            <img src="images/celulares/SonyM5.jpg" alt="...">
+            <div class="caption">
+              <p>Precio en un pago</p>
+              <p>$11.474</p>
+              <p>Con Plan Control $420 x mes</p>
+              <input id="producto12" type="checkbox" name="box12" value="12"> <label for="producto12">Comparar</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-pagination row">
+        <div class="col-xs-12 col-lg-4 ">
+          <p class="center">Productos 1-12 de 61</p>
+        </div>
+        <div class="col-xs-12 col-lg-offset-4 col-lg-4">
+          <div class="w3-bar">
+            <a href="#" class="w3-button">&laquo;</a>
+            <a href="#" class="w3-button">1</a>
+            <a href="#" class="w3-button">2</a>
+            <a href="#" class="w3-button">3</a>
+            <a href="#" class="w3-button">4</a>
+            <a href="#" class="w3-button">&raquo;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="container">
+      <div id="listaCompara" class="row">
+          <button onclick="location.href='productos.html'" type="button" name="button">Ir a</button>
+      </div>
+    </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/comparaProductos.js" type="text/javascript">  </script>
+</body>
+</html>
