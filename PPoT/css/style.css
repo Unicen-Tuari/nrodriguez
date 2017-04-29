@@ -1,0 +1,26 @@
+body{
+background-color: #FA9547;
+text-align: center;
+font-family: fantasy;
+color: white;
+}
+
+h1{
+  background-color: black;
+  color: orange;
+
+  text-shadow: 3px 3px 3px #FA9547;
+}
+
+h5{
+  font-size: 80px;
+}
+
+.center-vertical{
+  margin-top: 100px;
+}
+
+.thumbnail{
+background-color: #FA9547;
+border: 1px #FA9547 solid;
+}
