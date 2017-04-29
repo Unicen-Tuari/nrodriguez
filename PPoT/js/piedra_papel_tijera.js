@@ -2,123 +2,154 @@
 
 const tijera = 3;
 let cantObjetos = 3;
-let imgPlayer = document.getElementById("img-jugador")
-let imgComputer = document.getElementById('img-maquina');
-let result = document.getElementById('resultado');
-let player = document.getElementById('puntos-jugador');
-let computer = document.getElementById('puntos-maquina');
-let pointsPlayer = 0;
-let pointsComputer = 0;
-let probability = document.getElementById('probabilidad');
+let puntosMaquina = 0;
+let puntosJugador = 0;
 let ultimaJugada = 0;
+let cantidadPartidas = 1;
+
+let imgJugador = document.getElementById("img-jugador")
+let imgMaquina = document.getElementById('img-maquina');
+let tabResultado = document.getElementById('resultados');
+let jugador = document.getElementById('puntos-jugador');
+let maquina = document.getElementById('puntos-maquina');
+let resultPartida = document.getElementById("resultado-Partida");
+
+let probabilidad = document.getElementById('probabilidad');
 
 let botPapel = document.getElementById('bot-papel');
-botPapel.addEventListener("click",function(){playWPaper();});
+botPapel.addEventListener("click",function(){jugarPapel();});
 
 let botPiedra = document.getElementById('bot-piedra');
-botPiedra.addEventListener("click",function(){playWStone();});
+botPiedra.addEventListener("click",function(){jugarPiedra();});
 
 let botTijera = document.getElementById('bot-tijera');
-botTijera.addEventListener("click",function(){playWScissors();});
+botTijera.addEventListener("click",function(){jugarTijera();});
 
-let check = document.getElementById('probabilidad');
-check.addEventListener("click",function(){probabilidad();});
-
-
-function getNumObjet(){
+function obtenerNumObjeto(){
   return Math.floor(Math.random()*cantObjetos+1);
 };
 
-function playWPaper(){
-  imgPlayer.src = "./imagenes/papelc.png";
-  let numberObjectComp=getNumObjet();
-   if ((ultimaJugada === tijera) && (probability.checked)){
+function jugarPapel(){
+  imgJugador.src = "./imagenes/papelc.png";
+  let numberObjectComp=obtenerNumObjeto();
+   if ((ultimaJugada === tijera) && (probabilidad.checked)){
      numberObjectComp = 1;
    };
       switch (numberObjectComp) {
         case 1:{
-          result.innerHTML = 'GANASTE';
-          pointsPlayer += 1;
-          player.innerHTML = pointsPlayer;
-          imgComputer.src = "./imagenes/piedrac.png";
+          resultPartida.innerHTML = 'GANASTE';
+          puntosJugador += 1;
+          jugador.innerHTML = puntosJugador;
+          imgMaquina.src = "./imagenes/piedrac.png";
           ultimaJugada = 0;
          break;
        };
         case 2:{
-          result.innerHTML = 'EMPATE';
-          imgComputer.src = "./imagenes/papelc.png";
+          resultPartida.innerHTML = 'EMPATE';
+          imgMaquina.src = "./imagenes/papelc.png";
           break;
         };
         case 3:{
-          result.innerHTML = 'PERDISTE';
-          pointsComputer += 1;
-          computer.innerHTML = pointsComputer;
-          imgComputer.src = "./imagenes/tijerac.png";
+          resultPartida.innerHTML = 'PERDISTE';
+          puntosMaquina += 1;
+          maquina.innerHTML = puntosMaquina;
+          imgMaquina.src = "./imagenes/tijerac.png";
           ultimaJugada = 3;
           break;
         };
       };
+      addResultTable(resultPartida.innerHTML);
+      cantidadPartidas += 1;
 };
 
-function playWStone(){
-  imgPlayer.src = "./imagenes/piedrac.png";
-  let numberObjectComp=getNumObjet();
-  if ((ultimaJugada === tijera) && (probability.checked)){
+function jugarPiedra(){
+  imgJugador.src = "./imagenes/piedrac.png";
+  let numberObjectComp=obtenerNumObjeto();
+  if ((ultimaJugada === tijera) && (probabilidad.checked)){
     numberObjectComp = 1;
   };
       switch (numberObjectComp) {
         case 1:{
-          result.innerHTML = 'EMPATE';
-          imgComputer.src = "./imagenes/piedrac.png";
+          resultPartida.innerHTML = 'EMPATE';
+          imgMaquina.src = "./imagenes/piedrac.png";
           ultimaJugada = 0;
           break;
         }
         case 2:{
-          result.innerHTML = 'PERDISTE';
-          pointsComputer += 1;
-          computer.innerHTML = pointsComputer;
-          imgComputer.src = "./imagenes/papelc.png";
+          resultPartida.innerHTML = 'PERDISTE';
+          puntosMaquina += 1;
+          maquina.innerHTML = puntosMaquina;
+          imgMaquina.src = "./imagenes/papelc.png";
           break;
         }
         case 3:{
-          result.innerHTML = 'GANASTE';
-          pointsPlayer +=1;
-          player.innerHTML = pointsPlayer;
-          imgComputer.src= "./imagenes/tijerac.png";
+          resultPartida.innerHTML = 'GANASTE';
+          puntosJugador +=1;
+          jugador.innerHTML = puntosJugador;
+          imgMaquina.src= "./imagenes/tijerac.png";
           ultimaJugada = 3;
         break;
       };
     };
+    addResultTable(resultPartida.innerHTML);
+    cantidadPartidas += 1;
 };
 
 
-function playWScissors(){
-  imgPlayer.src = "./imagenes/tijerac.png";
-  let numberObjectComp=getNumObjet();
-  if ((ultimaJugada === tijera) && (probability.checked)){
+function jugarTijera(){
+  imgJugador.src = "./imagenes/tijerac.png";
+  let numberObjectComp=obtenerNumObjeto();
+  if ((ultimaJugada === tijera) && (probabilidad.checked)){
     numberObjectComp = 1;
   };
       switch (numberObjectComp) {
         case 1:{
-          result.innerHTML = 'PERDISTE';
-          pointsComputer +=1;
-          computer.innerHTML = pointsComputer;
-          imgComputer.src= "./imagenes/piedrac.png";
+          resultPartida.innerHTML = 'PERDISTE';
+          puntosMaquina +=1;
+          maquina.innerHTML = puntosMaquina;
+          imgMaquina.src= "./imagenes/piedrac.png";
           ultimaJugada = 0;
           break;
         };
         case 2:{
-          result.innerHTML = 'GANASTE';
-          pointsPlayer += 1;
-          player.innerHTML = pointsPlayer;
-          imgComputer.src = "./imagenes/papelc.png";
+          resultPartida.innerHTML = 'GANASTE';
+          puntosJugador += 1;
+          jugador.innerHTML = puntosJugador;
+          imgMaquina.src = "./imagenes/papelc.png";
          break;
         };
         case 3:{
-          result.innerHTML = 'EMPATE';
-          imgComputer.src = "./imagenes/tijerac.png";
+          resultPartida.innerHTML = 'EMPATE';
+          imgMaquina.src = "./imagenes/tijerac.png";
           ultimaJugada = 3;
           break;
         };
       };
+      addResultTable(resultPartida.innerHTML);
+      cantidadPartidas += 1;
+};
+
+function addResultTable(resultadoPartida){
+  let  infoPartida= document.createElement("tr");
+  let  ganadorPartida = document.createElement("td");
+  let  numeroParitda = document.createElement("td");
+  switch (resultadoPartida){
+    case "GANASTE":
+      ganadorPartida.innerHTML = "HUMANO";
+      numeroParitda.innerHTML = cantidadPartidas;
+      break;
+    case "PERDISTE" :{
+      ganadorPartida.innerHTML = "COMPUTADORA";
+      numeroParitda.innerHTML = cantidadPartidas;
+      break;
+    };
+    case "EMPATE" :{
+      ganadorPartida.innerHTML = "NINGUNO";
+      numeroParitda.innerHTML = cantidadPartidas;
+      break;
+    };
+  };
+  infoPartida.append(numeroParitda);
+  infoPartida.append(ganadorPartida);
+  tabResultado.append(infoPartida);
 };
