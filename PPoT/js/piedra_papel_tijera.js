@@ -63,16 +63,23 @@ function playWStone(){
   let numberObjectComp=getNumObjet();
       switch (numberObjectComp) {
         case 1:{
-          alert('Ganaste');
+          result.innerHTML = 'EMPATE';
+          imgComputer.src = "./imagenes/piedrac.png";
           break;
         }
         case 2:{
-          alert ('Empate');
+          result.innerHTML = 'PERDISTE';
+          pointsComputer +=1;
+          computer.innerHTML = pointsComputer;
+          imgComputer.src= "./imagenes/papelc.png";
           break;
         }
         case 3:{
-          alert('Perdiste');
-          break;
+          result.innerHTML = 'GANASTE';
+          pointsPlayer +=1;
+          player.innerHTML = pointsPlayer;
+          imgComputer.src= "./imagenes/tijerac.png";
+        break;
         }
 
       }
