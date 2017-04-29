@@ -59,7 +59,6 @@ function jugarPapel(){
         };
       };
       addResultTable(resultPartida.innerHTML);
-      cantidadPartidas += 1;
 };
 
 function jugarPiedra(){
@@ -92,7 +91,6 @@ function jugarPiedra(){
       };
     };
     addResultTable(resultPartida.innerHTML);
-    cantidadPartidas += 1;
 };
 
 
@@ -126,7 +124,6 @@ function jugarTijera(){
         };
       };
       addResultTable(resultPartida.innerHTML);
-      cantidadPartidas += 1;
 };
 
 function addResultTable(resultadoPartida){
@@ -152,4 +149,5 @@ function addResultTable(resultadoPartida){
   infoPartida.append(numeroParitda);
   infoPartida.append(ganadorPartida);
   tabResultado.append(infoPartida);
+  cantidadPartidas += 1;
 };
