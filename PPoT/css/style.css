@@ -24,3 +24,29 @@ h5{
 background-color: #FA9547;
 border: 1px #FA9547 solid;
 }
+
+label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -3px;
+    overflow: hidden;
+}
+
+th,tr{
+  color: orange;
+  font-family: sans-serif;
+}
+
+.panel th{
+    text-align: center;
+}
