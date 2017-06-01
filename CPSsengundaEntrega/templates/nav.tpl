@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-12">
-    <img src="images/banner.png" alt="banner" class="img-responsive">
+    <img src="./css/images/banner.png" alt="banner" class="img-responsive">
     <nav class="navbar navbar-default">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">

@@ -1,3 +1,5 @@
+{include file="header.tpl"}
+{include file="nav.tpl"}
 <div class="row">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
@@ -10,7 +12,7 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <img src="images/carousel/actualizacion-android.jpg" alt="Chania" width="460" height="345">
+              <img src="images/carousel/actualizacion-android.jpg" alt="Chania">
               <div class="carousel-caption">
                 <h3></h3>
                 {foreach from=$noticias item=noticia}
@@ -35,8 +37,8 @@
           <h3> Planes </h3>
         </div>
       </div>
-             <div class="row">
-             <div class="col-sm-6 col-lg-3 ">
+         <div class="row">
+            <div class="col-sm-6 col-lg-3 ">
               <div class="thumbnail">
                 <h3> 1 Giga</h3>
                 <img src="images/planes/1gb.jpg" alt="Gatito en Manta" class="img-responsive img-circle">
@@ -72,4 +74,5 @@
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+{include file="footer.tpl"}
