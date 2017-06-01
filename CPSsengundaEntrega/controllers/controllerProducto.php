@@ -1,6 +1,6 @@
 <?php
-require_once('viewProducto.php');
-require_once('modelProducto.php');
+require_once('views/viewProducto.php');
+require_once('models/modelProducto.php');
 
 class controllerProducto{
   private $vista;
@@ -11,45 +11,160 @@ class controllerProducto{
     $this->model = new modelProducto();
   }
 
-  private function validarCampos(){
-    $is_valido=false;
-    $errores=array();
-    foreach ($productos as $carac => $valor){
-      if (isset($valor) && strlen(trim($valor))>0){
-         $is_valido=true;
-      else
-         $errores[]='Error el campo ' . $carac . ' se encuentra vacio';
-      }
+private function validaCampo($caracteristica){
+    if (isset($caracteristica) && strlen(trim($caracteristica))>0){
+      return true;
+
     }
-    if ($is_valido){
-      return $is_valido
+    else {
+      return false;
+
     }
-    else
-      return $errores;
   }
 
-  function insertarProducto($productos){
-      $
-        $this->model->setProducto($productos['nombre'],$productos['precio'],
-                                  $productos['marca'],$productos['color'],
-                                  $_POST['display'],$productos['procesador'],
-                                  $_POST['camPrin'],$POST['camSec'],
-                                  $_POST['so'],$_POST['red'],$_POST['fBanda'],
-                                  $_POST['bateria'],$_POST['memoriaI'],
-                                  $_POST['peso'],$_POST['dimension'],
-                                  $_POST['pantalla'],$_POST['bluetooth'],
-                                  $_POST['marcaPorVoz']);
+function insertarProducto(){
+
+      $errores=array();
+      $producto=array();
+      if ($this->validaCampo($_POST['producto'])){
+        $producto['nombre']=$_POST['producto'];
       }
-    }
+      else {
+        $errores[]="Error: El campo nombre está vacio";
+      }
+      if ($this->validaCampo($_POST['precio'])){
+        $producto['precio'] = $_POST['precio'];
+      }
+      else{
+        $errores[]="Error: El campo precio está vacio";
+      }
+      if ($this->validaCampo($_POST['marca'])){
+        $producto['marca'] = $_POST['marca'];
+      }
+      else{
+        $errores[]="Error: El campo marca está vacio";
+      }
+      if ($this->validaCampo($_POST['color'])){
+        $producto['color'] = $_POST['color'];
+      }
+      else{
+        $errores[]="Error: El campo color está vacio";
+      }
+      if ($this->validaCampo($_POST['display'])){
+        $producto['display'] = $_POST['display'];
+      }
+      else{
+        $errores[]="Error: El campo display está vacio";
+      }
+      if ($this->validaCampo($_POST['procesador'])){
+        $producto['procesador'] = $_POST['procesador'];
+      }
+      else{
+        $errores[]="Error: El campo procesador está vacio";
+      }
+      if ($this->validaCampo($_POST['camPrin'])){
+        $producto['camPrin'] = $_POST['camPrin'];
+      }
+      else {
+        $errores[]="Error: El campo camara primaria está vacio";
+      }
+      if ($this->validaCampo($_POST['camSec'])){
+        $producto['camSec'] = $_POST['camSec'];
+      }
+      else {
+        $errores[]="Error: El campo camara secundaria está vacio";
+      }
+      if ($this->validaCampo($_POST['so'])){
+        $producto['so'] = $_POST['so'];
+      }
+      else{
+        $errores[]="Error: El campo sistema operativo está vacio";
+      }
+      if ($this->validaCampo($_POST['red'])){
+        $producto['red'] = $_POST['red'];
+      }
+      else{
+        $errores[]="Error: El campo red está vacio";
+      }
+      if ($this->validaCampo($_POST['fBanda'])){
+        $producto['fBanda'] = $_POST['fBanda'];
+      }
+      else{
+        $errores[]="Error: El campo frecuencia está vacio";
+      }
+      if ($this->validaCampo($_POST['bateria'])){
+        $producto['bateria'] = $_POST['bateria'];
+      }
+      else{
+        $errores[]="Error: El campo bateria está vacio";
+      }
 
+      if ($this->validaCampo($_POST['tiempo'])){
+        $producto['tiempo'] = $_POST['tiempo'];
+      }
+      else {
+        $errores[]="Error: El campo tiempo está vacio";
+      }
+      if ($this->validaCampo($_POST['memoriaI'])){
+        $producto['memoriaI'] = $_POST['memoriaI'];
+      }
+      else {
+        $errores[]="Error: El campo memoria interna está vacio";
+      }
+      if ($this->validaCampo($_POST['peso'])){
+        $producto['peso'] = $_POST['peso'];
+      }
+      else{
+        $errores[]="Error: El campo peso está vacio";
+      }
 
+      if ($this->validaCampo($_POST['dimension'])){
+        $producto['dimension'] = $_POST['dimension'];
+      }
+      else{
+        $errores[]="Error: El campo dimension está vacio";
+      }
+      if ($this->validaCampo($_POST['dimension'])){
+        $producto['dimension'] = $_POST['dimension'];
+      }
+      if ($this->validaCampo($_POST['pantalla'])){
+        $producto['pantalla'] = $_POST['pantalla'];
+      }
+      else{
+        $errores[]="Error: El campo pantalla está vacio";
+      }
+      if ($this->validaCampo($_POST['bluetooth'])){
+        $producto['bluetooth'] = $_POST['bluetooth'];
+      }
+      else{
+        $errores[]="Error: El campo bluetooth está vacio";
+      }
+      if ($this->validaCampo($_POST['marcaPorVoz'])){
+        $producto['marcaPorVoz'] = $_POST['marcaPorVoz'];
+      }
+      else {
+        $errores[]="Error: El campo marcación por voz está vacio";
+      }
+      if (sizeof($errores)==0) {
+        $this->model->setProducto($producto);
+        $this->vista->getFormProducto('Insertar Producto',$errores);
+      }
+      else{
+        $this->vista->getFormProducto('Insertar Producto',$errores);
+      }
+}
 
-  function mostrarTodosProductos(){
+function getFormProducto($errores=[]){
+  $this->vista->getFormProducto('Insertar Producto',$errores);
+}
+
+function mostrarTodosProductos(){
       $productos = $this->model->getProductos();
       $productosAMostrar = array();
       foreach ($productos as $producto) {
             $productosAMostrar[]= $producto;
         }
-      }
+      $this->vista->mostrarProductos();
+}
 }
 ?>
