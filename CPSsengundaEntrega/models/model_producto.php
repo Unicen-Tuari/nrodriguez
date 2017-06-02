@@ -1,5 +1,6 @@
 <?php
   class modelProducto{
+    private $db;
     function __construct(){
       $this->db = new PDO('mysql:host=localhost;'. 'dbname=cps;charset=utf8',
                         'root','');
