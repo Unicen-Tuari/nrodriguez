@@ -17,6 +17,7 @@
         <ul class="nav navbar-nav">
           <li><a href="productos.html"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Productos</a></li>
           <li><a href="contacto.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Contacto</a></li>
+          <li><a href="contacto.html"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Insertar</a></li>
         </ul>
         <form class="navbar-form navbar-right">
           <div class="form-group">
