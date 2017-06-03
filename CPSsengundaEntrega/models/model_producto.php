@@ -11,9 +11,9 @@
                                   color,display,procesador,camaraPrincipal,
                                   camaraSecundaria,sistemaOp,red,frecuencia,
                                   bateria,tiempo,memoriaI,peso,dimension,
-                                  pantalla,bluetooth,marcaporVoz) ".
+                                  pantalla,bluetooth,marcaporVoz,id_categoria) ".
                                   "VALUES (?,?,?,?,?,?,?,?,?,?,?,
-                                           ?,?,?,?,?,?,?,?)");
+                                           ?,?,?,?,?,?,?,?,?)");
     $result = $insertar->execute(array($producto['nombre'],$producto['precio'],
                                        $producto['marca'],$producto['color'],
                                        $producto['display'],
@@ -25,7 +25,8 @@
                                        $producto['memoriaI'],$producto['peso'],
                                        $producto['dimension'],
                                        $producto['pantalla'],$producto['bluetooth'],
-                                       $producto['marcaPorVoz']));
+                                       $producto['marcaPorVoz'],
+                                       $producto['categoria']));
 
   }
 
