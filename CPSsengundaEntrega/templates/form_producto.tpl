@@ -1,4 +1,6 @@
 {include file="header.tpl"}
+{include file="footer.tpl"}
+{include file="nav.tpl"}
       <div class="col-lg-12">
       <div class="row encabezado">
        <div class="col-lg-12">
