@@ -27,13 +27,11 @@
                                        $producto['pantalla'],$producto['bluetooth'],
                                        $producto['marcaPorVoz'],
                                        $producto['categoria']));
-
   }
-
   function getProductos(){
     $consultaProducto=$this->db->prepare("SELECT * FROM producto LIMIT 12");
     $producto=$consultaProducto->execute();
-    return $producto->fetchall();
+    return $consultaProducto->fetchall();
   }
 
   function getProductobyName($nombre){
@@ -42,6 +40,5 @@
     $productos=$consultaProducto->execute(array($nombre));
     return $productos->fetchall();
   }
-
 }
 ?>
