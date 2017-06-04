@@ -161,14 +161,26 @@ function mostrarFormProducto($errores,$action){
   $this->vista->getFormProducto('Insertar Producto',$errores,$action);
 }
 
-function mostrarTodosProductos(){
+function mostrarTodosProductos($errores=[]){
       $productos = $this->model->getProductos();
-      $productosAMostrar = array();
-      foreach ($productos as $producto) {
-            $productosAMostrar[]= $producto;
-        }
-    return var_dump($productosAMostrar);  
-      /*$this->vista->mostrarProductos();*/
-}
+      $this->vista->mostrarProductos($productos,$errores);
+ }
+
+ function borrarProducto($id_Prod){
+   $errores=array();
+   if ($id_Prod !=''){
+     if ($this->model->getProductoById($id_Prod)){
+       $this->model->deleteProducto($id_Prod);
+     }
+     else{
+       $errores[] = 'Error: El producto no existe';
+     }
+   }
+   else {
+      $errores[] = 'Error: ID invalido';
+   }
+   $this->mostrarTodosProductos($errores);
+ }
+
 }
 ?>

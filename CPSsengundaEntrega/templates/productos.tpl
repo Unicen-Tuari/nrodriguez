@@ -50,21 +50,33 @@
           </div>
         </div>
       </div>
+      {if $errores}
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div>
+             <span class="label label-danger">{$errores[0]|upper}</span>
+          </div>
+        </div>
+      {/if}
       <div class="row">
+        {foreach $productos item=producto}
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
           <div class="thumbnail">
             <h3></h3>
             <img src="images/celulares/Iphone7plus.jpg" alt="...">
             <div class="caption">
-              <p>Precio en un pag</p>
-              <p></p>
+              <p>Precio en un Pago</p>
+              <p>{$producto['precio']}</p>
               <p>Con Plan Control $420 x mes</p>
-              <input id="{$producto['id_producto']}" type="checkbox" name="box1"
-              value="1"> <label for="{$producto['id_producto']}">Comparar</label>
+              <input id="{$producto['id_producto']}" type="checkbox" name="box1"value="1">
+              <label for="{$producto['id_producto']}">Comparar</label>
+              <p><a href="#" class="btn btn-primary" role="button">Ver Detalle</a>
+              <a href="producto/eliminar/{$producto['id_producto']}" class="btn btn-default" role="button">Eliminar</a></p>
             </div>
           </div>
         </div>
+        {/foreach}
       </div>
+
       <div class="nav-pagination row">
         <div class="col-xs-12 col-lg-4 ">
           <p class="center">Productos 1-12 de 61</p>

@@ -34,11 +34,18 @@
     return $consultaProducto->fetchall();
   }
 
-  function getProductobyName($nombre){
-    $consultaProducto=$this->db->prepare("SELECT nombre,precio FROM producto
-                                         WHERE nombre LIKE ?");
-    $productos=$consultaProducto->execute(array($nombre));
-    return $productos->fetchall();
+  function getProductoById($id_Prod){
+    $consultaProducto=$this->db->prepare("SELECT * FROM producto
+                                         WHERE id_producto = ?");
+    $producto = $consultaProducto->execute(array($id_Prod));
+    return $consultaProducto->fetch();
   }
+
+  function deleteProducto($id_Prod){
+    $delete = $this->db->prepare("DELETE FROM producto
+                                    WHERE id_producto = ?");
+    $delete->execute(array($id_Prod));
+  }
+
 }
 ?>
