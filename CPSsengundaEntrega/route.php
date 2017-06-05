@@ -103,7 +103,6 @@ else{
          echo $error;;
          break;
   }
-
 }
 
 ?>
