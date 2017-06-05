@@ -205,3 +205,9 @@ line-height: 1;
   color: blue;
   background-color: white;
 }
+
+.panel-default>.panel-heading{
+  color: #d0d6ef;
+  background-color: #0534b9;
+  border-color: #337ab7;
+}

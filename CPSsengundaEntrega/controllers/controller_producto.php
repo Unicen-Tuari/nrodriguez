@@ -182,5 +182,10 @@ function mostrarTodosProductos($errores=[]){
    $this->mostrarTodosProductos($errores);
  }
 
+ function mostrarDetProducto($id_Prod){
+   $producto = $this->model->getProductoById($id_Prod);
+   $this->vista->getDetailsProd('Detalle Producto',$producto);
+ }
+
 }
 ?>

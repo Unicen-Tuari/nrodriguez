@@ -26,6 +26,13 @@
      $this->smarty->assign("baseDir", $this->baseDir);
      $this->smarty->display('productos.tpl');
    }
+
+   function getDetailsProd($titulo,$producto){
+     $this->smarty->assign('titulo',$titulo);
+     $this->smarty->assign('producto',$producto);
+     $this->smarty->assign("baseDir", $this->baseDir);
+     $this->smarty->display('detalle_producto.tpl');
+   }
  }
 
  ?>

@@ -69,7 +69,7 @@
               <p>Con Plan Control $420 x mes</p>
               <input id="{$producto['id_producto']}" type="checkbox" name="box1"value="1">
               <label for="{$producto['id_producto']}">Comparar</label>
-              <p><a href="#" class="btn btn-primary" role="button">Ver Detalle</a>
+              <p><a href="producto/verDetalle/{$producto['id_producto']}" class="btn btn-primary" role="button">Ver Detalle</a>
               <a href="producto/eliminar/{$producto['id_producto']}" class="btn btn-default" role="button">Eliminar</a></p>
             </div>
           </div>
