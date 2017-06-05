@@ -18,6 +18,7 @@
           <li><a href="producto/mostrarProductos"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Productos</a></li>
           <li><a href="contacto"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Contacto</a></li>
           <li><a href="producto/insertar"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Insertar Producto</a></li>
+          <li><a href="categoria/insertar"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Insertar Categoria</a></li>
         </ul>
         <form class="navbar-form navbar-right">
           <div class="form-group">
