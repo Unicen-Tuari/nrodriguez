@@ -28,6 +28,7 @@ else{
   $controller_prod = new controllerProducto();
   $controller_contact = new controllerContacto();
   $datos = parseUrl($_REQUEST[configApp::$ACTION]);
+  $error = '404 Not found';
   switch ($datos[configApp::$RESOURCE]){
     case configApp::$RESOURCE_PROD:
       if (isset($datos[configApp::$ACTION])){
@@ -52,7 +53,7 @@ else{
               $controller_prod->mostrarFormProducto(array(),$value);
               break;
           default:
-              echo 'ERROR: ACCION INVALIDA';
+              echo $error;
               break;
         }
       }
@@ -70,7 +71,7 @@ else{
               $controller_contact->mostrarFormContacto(array(),$value);
               break;
            default:
-              echo 'ERROR: ACCION INVALIDA';
+              echo $error;;
               break;
           }
         }
@@ -89,7 +90,7 @@ else{
                $controller_categoria->mostrarFormCategoria(array(),$value);
                break;
              default:
-               echo 'ERROR: ACCION INVALIDA';
+               echo $error;;
                break;
            }
          }
@@ -99,7 +100,7 @@ else{
          }
         break;
       default:
-         echo 'ERROR: ACCION INVALIDA';
+         echo $error;;
          break;
   }
 
