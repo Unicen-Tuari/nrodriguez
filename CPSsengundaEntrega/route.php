@@ -24,6 +24,7 @@ if ($_REQUEST[configApp::$ACTION]==''){
   $controller_Home->mostrarHome();
 }
 else{
+  $value=configApp::$ACTION_ADD;
   $controller_prod = new controllerProducto();
   $controller_contact = new controllerContacto();
   $datos = parseUrl($_REQUEST[configApp::$ACTION]);
@@ -32,7 +33,6 @@ else{
       if (isset($datos[configApp::$ACTION])){
         switch ($datos[configApp::$ACTION]){
           case configApp::$ACTION_ADD:
-              $value=configApp::$ACTION_ADD;
               $controller_prod->mostrarFormProducto(array(),$value);
               break;
           case configApp::$ACTION_ADD_PROD:
@@ -49,7 +49,6 @@ else{
               $controller_prod->mostrarDetProducto($datos[configApp::$PARAMETERS]);
               break;
           case '':
-              $value=configApp::$ACTION_ADD;
               $controller_prod->mostrarFormProducto(array(),$value);
               break;
           default:
@@ -65,11 +64,9 @@ else{
        if (isset($datos[configApp::$ACTION])){
         switch ($datos[configApp::$ACTION]){
           case configApp::$ACTION_ADD:
-              $value=configApp::$ACTION_ADD;
               $controller_contact->mostrarFormContacto(array(),$value);
               break;
            case '':
-              $value=configApp::$ACTION_ADD;
               $controller_contact->mostrarFormContacto(array(),$value);
               break;
            default:
@@ -78,7 +75,6 @@ else{
           }
         }
       else{
-        $value=configApp::$ACTION_ADD;
         $controller_contact->mostrarFormContacto(array(),$value);
         break;
         }
@@ -87,11 +83,9 @@ else{
          if (isset($datos[configApp::$ACTION])){
            switch ($datos[configApp::$ACTION]){
              case configApp::$ACTION_ADD:
-               $value=configApp::$ACTION_ADD;
                $controller_categoria->mostrarFormCategoria(array(),$value);
                break;
              case '':
-               $value=configApp::$ACTION_ADD;
                $controller_categoria->mostrarFormCategoria(array(),$value);
                break;
              default:
@@ -100,11 +94,13 @@ else{
            }
          }
        else{
-         $value=configApp::$ACTION_ADD;
          $controller_categoria->mostrarFormCategoria(array(),$value);
          break;
          }
         break;
+      default:
+         echo 'ERROR: ACCION INVALIDA';
+         break;
   }
 
 }
