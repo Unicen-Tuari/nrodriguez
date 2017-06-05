@@ -9,7 +9,7 @@ class controllerHome{
   }
 
   public function mostrarHome(){
-    $this->viewHome->mostrar();
+    $this->viewHome->mostrar('Homepage');
   }
 }
 

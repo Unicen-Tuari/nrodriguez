@@ -11,7 +11,8 @@ class viewHome{
     $this->baseDir = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/';
   }
 
-  public function mostrar(){
+  public function mostrar($titulo){
+    $this->smarty->assign('titulo',$titulo);
     $this->smarty->assign("baseDir", $this->baseDir);
     $this->smarty->display('home.tpl');
   }
