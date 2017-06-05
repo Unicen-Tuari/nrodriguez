@@ -12,9 +12,6 @@ function parseUrl($url){
   if (isset($arrData[1])){
     $arrInfo[configApp::$ACTION] = $arrData[1];
   }
-  else{
-    unset($arrData[1]);
-  }
   if (isset($arrData[2])){
     $arrInfo[configApp::$PARAMETERS] = $arrData[2];
   }
