@@ -12,6 +12,9 @@ function parseUrl($url){
   if (isset($arrData[1])){
     $arrInfo[configApp::$ACTION] = $arrData[1];
   }
+  else{
+    unset($arrData[1]);
+  }
   if (isset($arrData[2])){
     $arrInfo[configApp::$PARAMETERS] = $arrData[2];
   }
@@ -25,39 +28,88 @@ if ($_REQUEST[configApp::$ACTION]==''){
 }
 else{
   $controller_prod = new controllerProducto();
+  $controller_contact = new controllerContacto();
   $datos = parseUrl($_REQUEST[configApp::$ACTION]);
-  if ($datos[configApp::$RESOURCE] === configApp::$RESOURCE_PROD){
-    switch ($datos[configApp::$ACTION]) {
-      case configApp::$ACTION_ADD:
-        $value=configApp::$ACTION_ADD;
-        $controller_prod->mostrarFormProducto(array(),$value);
-        break;
-      case configApp::$ACTION_ADD_PROD:
-       $value=configApp::$ACTION_ADD_PROD;
-       $controller_prod->insertarProducto($value);
-       break;
-      case configApp::$ACTION_VIEW_PROD:
-       $controller_prod->mostrarTodosProductos();
-       break;
-      case configApp::$ACTION_DELETE_PROD:
-       $controller_prod->borrarProducto($datos[configApp::$PARAMETERS]);
-       break;
-      case configApp::$ACTION_VIEW_DETAILS_PROD:
-       $controller_prod->mostrarDetProducto($datos[configApp::$PARAMETERS]);
-       break;
-      default:
-      $value=configApp::$ACTION_ADD;
-      break;
-    }
-  }
- else{
-    switch ($_REQUEST[configApp::$ACTION]){
-      case configApp::$ACTION_VIEW_CONTACT:{
-        $controller_contact = new controllerContacto();
-        $controller_contact->mostrarFormContacto();
+  switch ($datos[configApp::$RESOURCE]){
+    case configApp::$RESOURCE_PROD:
+      if (isset($datos[configApp::$ACTION])){
+        switch ($datos[configApp::$ACTION]){
+          case configApp::$ACTION_ADD:
+              $value=configApp::$ACTION_ADD;
+              $controller_prod->mostrarFormProducto(array(),$value);
+              break;
+          case configApp::$ACTION_ADD_PROD:
+              $value=configApp::$ACTION_ADD_PROD;
+              $controller_prod->insertarProducto($value);
+              break;
+          case configApp::$ACTION_VIEW_PROD:
+              $controller_prod->mostrarTodosProductos();
+              break;
+          case configApp::$ACTION_DELETE_PROD:
+              $controller_prod->borrarProducto($datos[configApp::$PARAMETERS]);
+              break;
+          case configApp::$ACTION_VIEW_DETAILS_PROD:
+              $controller_prod->mostrarDetProducto($datos[configApp::$PARAMETERS]);
+              break;
+          case '':
+              $value=configApp::$ACTION_ADD;
+              $controller_prod->mostrarFormProducto(array(),$value);
+              break;
+          default:
+              echo 'ERROR: ACCION INVALIDA';
+              break;
+        }
       }
-    }
- }
+      else {
+        $controller_prod->mostrarFormProducto(array(),'');
+      }
+        break;
+    case configApp::$RESOURCE_CONTACT:
+       if (isset($datos[configApp::$ACTION])){
+        switch ($datos[configApp::$ACTION]){
+          case configApp::$ACTION_ADD:
+              $value=configApp::$ACTION_ADD;
+              $controller_contact->mostrarFormContacto(array(),$value);
+              break;
+           case '':
+              $value=configApp::$ACTION_ADD;
+              $controller_contact->mostrarFormContacto(array(),$value);
+              break;
+           default:
+              echo 'ERROR: ACCION INVALIDA';
+              break;
+          }
+        }
+      else{
+        $value=configApp::$ACTION_ADD;
+        $controller_contact->mostrarFormContacto(array(),$value);
+        break;
+        }
+       break;
+       case configApp::$RESOURCE_CATEGORY:
+         if (isset($datos[configApp::$ACTION])){
+           switch ($datos[configApp::$ACTION]){
+             case configApp::$ACTION_ADD:
+               $value=configApp::$ACTION_ADD;
+               $controller_categoria->mostrarFormCategoria(array(),$value);
+               break;
+             case '':
+               $value=configApp::$ACTION_ADD;
+               $controller_categoria->mostrarFormCategoria(array(),$value);
+               break;
+             default:
+               echo 'ERROR: ACCION INVALIDA';
+               break;
+           }
+         }
+       else{
+         $value=configApp::$ACTION_ADD;
+         $controller_categoria->mostrarFormCategoria(array(),$value);
+         break;
+         }
+        break;
+  }
+
 }
 
 ?>
