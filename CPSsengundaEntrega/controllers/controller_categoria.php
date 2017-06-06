@@ -30,11 +30,17 @@ class controllerCategoria{
       $errores = 'El campo nombre esta vacio';
     }
     if($errores===""){
-      $this->modelCategoria->setCategoria($nombre);
-      $this->mostrarFormCategoria($errores,$action);
+      $categoria=$this->modelCategoria->getCategoria($nombre);
+      if ($nombre===$categoria['nombre']){
+        $errores = "La categoria ya existe";
+        $this->mostrarFormCategoria($errores,'insertar');
+      }
+      else{
+        $this->modelCategoria->setCategoria($nombre);
+        $this->mostrarFormCategoria($errores,$action);
+      }
     }
     else{
-      echo $errores;
        $this->mostrarFormCategoria($errores,'insertar',$listaCat);
     }
 }

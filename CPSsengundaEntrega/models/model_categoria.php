@@ -16,7 +16,8 @@ class modelCategoria{
   public function getCategoria($nombre){
     $consulta = $this->db->prepare("SELECT * FROM categoria
                                     WHERE nombre LIKE ?");
-    return $consulta->execute(array($nombre));
+    $categoria=$consulta->execute(array($nombre));
+    return $consulta->fetch();
   }
 }
 ?>
