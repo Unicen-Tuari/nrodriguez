@@ -48,13 +48,11 @@ class controllerCategoria{
     $model_cat_disp = new modelCatDisp();
     $categoriasDisp = $model_cat_disp->getCategorias();
       foreach ($categoriasDisp as $categoria){
-        if((strpos($nombre, $categoria)===false)){
-          return false;
-        }
-        else{
+        if($nombre===$categoria){
           return true;
         }
       }
+      return false;
     }
 }
 ?>
