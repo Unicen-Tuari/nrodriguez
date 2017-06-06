@@ -10,9 +10,9 @@ class viewContacto{
     $this->baseDir = 'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/';
   }
 
-  function getFormContact($titulo){
+  function getFormContact($titulo,$errores,$action){
     $this->vista->assign('titulo',$titulo);
-    $this->vista->assign('baseDir',$this->baseDir);
+    $this->vista->assign("baseDir",$this->baseDir);
     $this->vista->display('form_consulta.tpl');
   }
 }
