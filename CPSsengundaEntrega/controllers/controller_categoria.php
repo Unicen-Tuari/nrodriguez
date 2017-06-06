@@ -2,6 +2,7 @@
 require_once('views/view_categoria.php');
 require_once('models/model_categoria.php');
 require_once('models/model_categorias_disponibles.php');
+
 class controllerCategoria{
   private $viewCategoria;
   private $modelCategoria;
