@@ -2,6 +2,7 @@
 require_once('controllers/controller_home.php');
 require_once('controllers/controller_producto.php');
 require_once('controllers/controller_contacto.php');
+require_once('controllers/controller_categoria.php');
 require_once('config/config_app.php');
 
 function parseUrl($url){
@@ -24,13 +25,13 @@ if ($_REQUEST[configApp::$ACTION]==''){
   $controller_Home->mostrarHome();
 }
 else{
-  $value=configApp::$ACTION_ADD;
-  $controller_prod = new controllerProducto();
+  $value = configApp::$ACTION_ADD;
   $controller_contact = new controllerContacto();
   $datos = parseUrl($_REQUEST[configApp::$ACTION]);
   $error = '404 Not found';
   switch ($datos[configApp::$RESOURCE]){
     case configApp::$RESOURCE_PROD:
+      $controller_prod = new controllerProducto();
       if (isset($datos[configApp::$ACTION])){
         switch ($datos[configApp::$ACTION]){
           case configApp::$ACTION_ADD:
@@ -81,10 +82,15 @@ else{
         }
        break;
        case configApp::$RESOURCE_CATEGORY:
+         $controller_categoria = new controllerCategoria();
          if (isset($datos[configApp::$ACTION])){
            switch ($datos[configApp::$ACTION]){
              case configApp::$ACTION_ADD:
                $controller_categoria->mostrarFormCategoria(array(),$value);
+               break;
+             case configApp::$ACTION_ADD_CAT:
+               $value = configApp::$ACTION_ADD_CAT;
+               $controller_categoria->insertarCategoria($value);
                break;
              case '':
                $controller_categoria->mostrarFormCategoria(array(),$value);
