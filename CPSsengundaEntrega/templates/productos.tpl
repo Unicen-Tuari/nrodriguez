@@ -4,14 +4,7 @@
     <div class="filterProducts col-xs-12  col-lg-2 ">
       <h3>Filtrar por</h3>
      <ul>
-       <li class="flecha">MARCAS</li>
-        <ul>
-          <li><a href="#">Samsung</a></li>
-          <li><a href="#">Iphone</a></li>
-          <li><a href="#">Motorola</a></li>
-          <li><a href="#">Sony</a></li>
-          <li><a href="#">Otros</a></li>
-        </ul>
+       {$listaCategorias}
         <li class="flecha">S.O</li>
         <ul>
           <li><a href="#">Android</a></li>
@@ -61,7 +54,7 @@
         {foreach $productos item=producto}
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
           <div class="thumbnail">
-            <h3></h3>
+            <h3>{$producto['nombre']}</h3>
             <img src="images/celulares/Iphone7plus.jpg" alt="...">
             <div class="caption">
               <p>Precio en un Pago</p>

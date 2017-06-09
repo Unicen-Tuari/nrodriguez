@@ -18,6 +18,11 @@ class viewCategoria{
     $this->smarty->assign("baseDir",$this->baseDir);
     $this->smarty->display('form_categoria.tpl');
   }
+  public function getListaCategorias($listaCat){
+    $this->smarty->assign('categorias',$listaCat);
+    $this->smarty->assign('baseDir',$this->baseDir);
+    return $this->smarty->fetch('listaMarcas.tpl');
+  }
 }
 
 ?>

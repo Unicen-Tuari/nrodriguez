@@ -1,6 +1,7 @@
 <?php
 require_once('views/view_producto.php');
 require_once('models/model_producto.php');
+require_once('controller_categoria.php');
 
 class controllerProducto{
   private $vista;
@@ -163,7 +164,9 @@ function mostrarFormProducto($errores,$action){
 
 function mostrarTodosProductos($errores=[]){
       $productos = $this->model->getProductos();
-      $this->vista->mostrarProductos($productos,$errores);
+      $controllerCategoria = new controllerCategoria();
+      $listaCatTpl = $controllerCategoria->getListaMarcas();
+      $this->vista->mostrarProductos($productos,$errores,$listaCatTpl);
  }
 
  function borrarProducto($id_Prod){

@@ -19,11 +19,12 @@
      $this->smarty->display('form_producto.tpl');
    }
 
-   function mostrarProductos($productos,$errores){
+   function mostrarProductos($productos,$errores,$listaTpl){
      $this->smarty->assign('productos',$productos);
      $this->smarty->assign('errores',$errores);
      $this->smarty->assign('titulo', 'Productos');
      $this->smarty->assign("baseDir", $this->baseDir);
+     $this->smarty->assign("listaCategorias",$listaTpl);
      $this->smarty->display('productos.tpl');
    }
 

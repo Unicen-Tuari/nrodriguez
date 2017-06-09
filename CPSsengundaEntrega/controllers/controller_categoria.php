@@ -54,5 +54,11 @@ class controllerCategoria{
       }
       return false;
     }
+  public function getListaMarcas(){
+    $listaCat = $this->modelCategoria->getCategorias(); 
+    $listaTpl = $this->viewCategoria->getListaCategorias($listaCat);
+    return $listaTpl;
+  }
+
 }
 ?>

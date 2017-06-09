@@ -9,7 +9,7 @@ class modelCategoria{
   }
 
   public function setCategoria($nombre){
-    $insertar = $this->db->prepare("INSERT INTO categoria(nombre)" . "VALUES (?)");
+    $insertar = $this->db->prepare("INSERT INTO categoria(nombre) VALUES (?)");
     $insertar->execute(array($nombre));
   }
 
@@ -18,6 +18,12 @@ class modelCategoria{
                                     WHERE nombre LIKE ?");
     $categoria=$consulta->execute(array($nombre));
     return $consulta->fetch();
+  }
+
+  public function getCategorias(){
+    $consulta=$this->db->prepare("SELECT * FROM categoria");
+    $categorias = $consulta->execute();
+    return $consulta->fetchAll();
   }
 }
 ?>
