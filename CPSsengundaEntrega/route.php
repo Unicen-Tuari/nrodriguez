@@ -89,6 +89,10 @@ if ($_REQUEST[configApp::$ACTION]==''){
 else{
   $value = configApp::$ACTION_ADD;
   $datos = parseUrl($_REQUEST[configApp::$ACTION]);
+  if ($datos[configApp::$RESOURCE]=='listaCat'){
+    $controller_categoria = new controllerCategoria();
+    $controller_categoria->mostrarListaCat();
+  }
   $errorRecurso = 'Recurso Invalido';
   $errorAction = 'Accion Invalida';
   switch ($datos[configApp::$RESOURCE]){
