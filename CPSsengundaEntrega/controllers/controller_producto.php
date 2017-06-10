@@ -184,7 +184,7 @@ function mostrarTodosProductos($errores=[]){
      }
    }
    else {
-      $errores[] = 'Error: ID invalido';
+      $errores[] = 'Error: Se esperaba un ID';
    }
    $this->mostrarTodosProductos($errores);
  }
