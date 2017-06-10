@@ -19,7 +19,7 @@ function parseUrl($url){
   return $arrInfo;
 }
 
-function menuActionProducto($action,$value,$error,$params){
+function menuActionProducto($action,$value,$error,$id_prod){
   $controller_prod = new controllerProducto();
     switch ($action){
         case configApp::$ACTION_ADD:
@@ -33,10 +33,10 @@ function menuActionProducto($action,$value,$error,$params){
             $controller_prod->mostrarTodosProductos();
             break;
         case configApp::$ACTION_DELETE_PROD:
-            $controller_prod->borrarProducto($params);
+            $controller_prod->borrarProducto($id_prod);
             break;
         case configApp::$ACTION_VIEW_DETAILS_PROD:
-            $controller_prod->mostrarDetProducto($params);
+            $controller_prod->mostrarDetProducto($id_prod);
             break;
         case '':
             $controller_prod->mostrarFormProducto(array(),$value);
@@ -76,7 +76,7 @@ function menuActionCategoria($action,$value,$error){
     $controller_categoria->mostrarFormCategoria(array(),$value);
     break;
   default:
-    echo $error;;
+    echo $error;
     break;
   }
 }
