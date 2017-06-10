@@ -38,6 +38,9 @@ function menuActionProducto($action,$value,$error,$id){
         case configApp::$ACTION_VIEW_DETAILS_PROD:
             $controller_prod->mostrarDetProducto($id);
             break;
+        case configApp::$ACTION_COMPARE:
+            $controller_prod->mostrarProdComp();
+            break;
         case '':
             $controller_prod->mostrarFormProducto(array(),$value);
             break;
@@ -80,7 +83,6 @@ function menuActionCategoria($action,$value,$error){
     break;
   }
 }
-
 
 if ($_REQUEST[configApp::$ACTION]==''){
   $controller_Home = new controllerHome();

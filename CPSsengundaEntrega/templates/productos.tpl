@@ -67,7 +67,8 @@
               <p>Precio en un Pago</p>
               <p>{$producto['precio']}</p>
               <p>Con Plan Control $420 x mes</p>
-              <input id="{$producto['id_producto']}" type="checkbox" name="box1"value="1">
+              <form  action="producto/comparar" method="post">
+              <input id="{$producto['id_producto']}" type="checkbox" name="{$producto['id_producto']}"value="{$producto['id_producto']}">
               <label for="{$producto['id_producto']}">Comparar</label>
               <p><a href="producto/verDetalle/{$producto['id_producto']}" class="btn btn-primary" role="button">Ver Detalle</a>
               <a href="producto/eliminar/{$producto['id_producto']}" class="btn btn-default" role="button">Eliminar</a></p>
@@ -77,7 +78,8 @@
         {/if}
         {/foreach}
       </div>
-
+      <input type="submit" value="Comparar">
+    </form>
       <div class="nav-pagination row">
         <div class="col-xs-12 col-lg-4 ">
           <p class="center">Productos 1-12 de 61</p>
@@ -95,11 +97,4 @@
       </div>
     </div>
     </div>
-
-    <div class="container">
-      <div id="listaCompara" class="row">
-
-      </div>
-    </div>
-
 {include file="footer.tpl"}

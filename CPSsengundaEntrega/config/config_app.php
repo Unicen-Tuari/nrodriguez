@@ -10,6 +10,7 @@
     public static $ACTION_VIEW_DETAILS_PROD = 'verDetalle';
     public static $ACTION_ADD_PROD = 'insertarProducto';
     public static $ACTION_ADD_CAT = 'insertarCategoria';
+    public static $ACTION_COMPARE = 'comparar';
 
 
     public static $RESOURCE = 'recurso';

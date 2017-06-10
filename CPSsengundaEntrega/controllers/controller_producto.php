@@ -224,5 +224,34 @@ public function mostrarTodosProductos($errores=[],$id){
    $this->vistaProducto->getDetailsProd('Detalle Producto',$producto);
  }
 
+ private function comprobarCantProd(){
+   if (sizeOf($_POST)>4){
+     $error[] = 'Solo se puede hasta 4 ';
+   }
+   elseif (sizeOf($_POST)<=1){
+     $error[] = 'No se seleccionaron productos suficientes';
+   }
+   else{
+     $error = '';
+   }
+   return $error;
+ }
+
+ public function mostrarProdComp(){
+   $productos=array();
+   $errores = $this->comprobarCantProd();
+   if ($errores==''){
+     foreach($_POST as $id => $value){
+       $productos[$id] = $this->modelProducto->getProductoById($id);
+     }
+     $this->vistaProducto->mostrarCompProd($productos,'Comparar Productos');
+     }
+   else{
+     $errores;
+     $productos = $this->modelProducto->getProductos();
+     $listaCat = $this->modelCategoria->getCategorias();
+     $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+    }
+  }
 }
 ?>

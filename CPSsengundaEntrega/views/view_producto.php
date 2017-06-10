@@ -34,6 +34,14 @@
      $this->smarty->assign("baseDir", $this->baseDir);
      $this->smarty->display('detalle_producto.tpl');
    }
+
+   function mostrarCompProd($productos,$titulo){
+     $this->smarty->assign('titulo','Comparacion');
+     $this->smarty->assign('productos',$productos);
+     $this->smarty->assign('tituloTabla',$titulo);
+     $this->smarty->assign('baseDir',$this->baseDir);
+     $this->smarty->display('comparacionProd.tpl');
+   }
  }
 
  ?>
