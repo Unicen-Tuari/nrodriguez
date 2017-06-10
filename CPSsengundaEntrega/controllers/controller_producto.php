@@ -1,15 +1,20 @@
 <?php
 require_once('views/view_producto.php');
+require_once('views/view_categoria.php');
 require_once('models/model_producto.php');
-require_once('controller_categoria.php');
+require_once('models/model_categoria.php');
 
 class controllerProducto{
-  private $vista;
-  private $model;
+  private $vistaProducto;
+  private $modelProducto;
+  private $vistaCategoria;
+  private $modelCategoria;
 
   function __construct(){
-    $this->vista = new viewProducto();
-    $this->model = new modelProducto();
+    $this->vistaProducto = new viewProducto();
+    $this->modelProducto = new modelProducto();
+    $this->vistaCategoria = new viewCategoria();
+    $this->modelCategoria = new modelCategoria();
   }
 
 private function validaCampo($caracteristica){
@@ -150,7 +155,7 @@ function insertarProducto($action){
         $errores['categoria'] = "Error: El campo categoria está vacio";
       }
       if (sizeof($errores)==0) {
-        $this->model->setProducto($producto);
+        $this->modelProducto->setProducto($producto);
         $this->mostrarFormProducto($errores,$action);
       }
       else{
@@ -159,21 +164,20 @@ function insertarProducto($action){
 }
 
 function mostrarFormProducto($errores,$action){
-  $this->vista->getFormProducto('Insertar Producto',$errores,$action);
+  $this->vistaProducto->getFormProducto('Insertar Producto',$errores,$action);
 }
 
 function mostrarTodosProductos($errores=[]){
-      $productos = $this->model->getProductos();
-      $controllerCategoria = new controllerCategoria();
-      $listaCatTpl = $controllerCategoria->getListaMarcas();
-      $this->vista->mostrarProductos($productos,$errores,$listaCatTpl);
+      $productos = $this->modelProducto->getProductos();
+      $listaCat = $this->modelCategoria->getCategorias();
+      $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
  }
 
  function borrarProducto($id_Prod){
    $errores=array();
    if ($id_Prod !=''){
-     if ($this->model->getProductoById($id_Prod)){
-       $this->model->deleteProducto($id_Prod);
+     if ($this->modelProducto->getProductoById($id_Prod)){
+       $this->modelProducto->deleteProducto($id_Prod);
      }
      else{
        $errores[] = 'Error: El producto no existe';
@@ -186,8 +190,8 @@ function mostrarTodosProductos($errores=[]){
  }
 
  function mostrarDetProducto($id_Prod){
-   $producto = $this->model->getProductoById($id_Prod);
-   $this->vista->getDetailsProd('Detalle Producto',$producto);
+   $producto = $this->modelProducto->getProductoById($id_Prod);
+   $this->vistaProducto->getDetailsProd('Detalle Producto',$producto);
  }
 
 }

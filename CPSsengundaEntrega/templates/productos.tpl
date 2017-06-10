@@ -4,7 +4,13 @@
     <div class="filterProducts col-xs-12  col-lg-2 ">
       <h3>Filtrar por</h3>
      <ul>
-       {$listaCategorias}
+       <li class="flecha">MARCAS</li>
+        <ul>
+          {foreach from=$lista item=categoria}
+          <li><a href="producto/mostrarProductos/{$categoria['nombre']}">{$categoria['nombre']}</a></li>
+          {/foreach}
+          <li><a href="producto/mostrarProductos">Mostrar Todo</a></li>
+        </ul>
         <li class="flecha">S.O</li>
         <ul>
           <li><a href="#">Android</a></li>
