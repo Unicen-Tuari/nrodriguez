@@ -7,7 +7,7 @@
        <li class="flecha">MARCAS</li>
         <ul>
           {foreach from=$lista item=categoria}
-          <li><a href="producto/mostrarProductos/{$categoria['nombre']}">{$categoria['nombre']}</a></li>
+          <li><a href="producto/mostrarProductos/{$categoria['id_categoria']}">{$categoria['nombre']}</a></li>
           {/foreach}
           <li><a href="producto/mostrarProductos">Mostrar Todo</a></li>
         </ul>
@@ -58,6 +58,7 @@
       {/if}
       <div class="row">
         {foreach $productos item=producto}
+        {if !$errores}
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
           <div class="thumbnail">
             <h3>{$producto['nombre']}</h3>
@@ -73,6 +74,7 @@
             </div>
           </div>
         </div>
+        {/if}
         {/foreach}
       </div>
 

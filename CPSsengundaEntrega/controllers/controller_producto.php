@@ -163,15 +163,45 @@ function insertarProducto($action){
       }
 }
 
-function mostrarFormProducto($errores,$action){
+public function mostrarFormProducto($errores,$action){
   $this->vistaProducto->getFormProducto('Insertar Producto',$errores,$action);
 }
 
-function mostrarTodosProductos($errores=[]){
-      $productos = $this->modelProducto->getProductos();
-      $listaCat = $this->modelCategoria->getCategorias();
-      $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
- }
+private function existeCategoria($id){
+  $listaCat = $this->modelCategoria->getCategorias();
+  foreach ($listaCat as $categoria) {
+    if ($id==$categoria['id_categoria']){
+      return true;
+    }
+  }
+   return false;
+}
+
+public function mostrarTodosProductos($errores=[],$id){
+      $existeCat = $this->existeCategoria($id);
+      $cantidadProd = $this->modelCategoria->cantidadProductoByCat($id);
+      switch ($id){
+        case '':
+          $productos = $this->modelProducto->getProductos();
+          $listaCat = $this->modelCategoria->getCategorias();
+          $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+          break;
+        default:
+           if ($existeCat && $cantidadProd>0){
+             $productos = $this->modelProducto->getProductosByCat($id);
+             $listaCat = $this->modelCategoria->getCategorias();
+             $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+           }
+           else{
+             $errores[] = "No se encontraron productos con esa categoria";
+             $productos = $this->modelProducto->getProductos();
+             $listaCat = $this->modelCategoria->getCategorias();
+             $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+           }
+           break;
+      }
+}
+
 
  function borrarProducto($id_Prod){
    $errores=array();
@@ -186,7 +216,7 @@ function mostrarTodosProductos($errores=[]){
    else {
       $errores[] = 'Error: Se esperaba un ID';
    }
-   $this->mostrarTodosProductos($errores);
+   $this->mostrarTodosProductos($errores,'');
  }
 
  function mostrarDetProducto($id_Prod){

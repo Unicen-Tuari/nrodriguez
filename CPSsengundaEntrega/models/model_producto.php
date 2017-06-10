@@ -29,16 +29,23 @@
                                        $producto['categoria']));
   }
   function getProductos(){
-    $consultaProducto=$this->db->prepare("SELECT * FROM producto LIMIT 12");
+    $consultaProducto = $this->db->prepare("SELECT * FROM producto LIMIT 12");
     $producto=$consultaProducto->execute();
     return $consultaProducto->fetchall();
   }
 
   function getProductoById($id_Prod){
-    $consultaProducto=$this->db->prepare("SELECT * FROM producto
+    $consultaProducto = $this->db->prepare("SELECT * FROM producto
                                          WHERE id_producto = ?");
     $producto = $consultaProducto->execute(array($id_Prod));
     return $consultaProducto->fetch();
+  }
+
+  function getProductosByCat($id){
+    $consultaProducto = $this->db->prepare("SELECT * FROM producto p
+                                            WHERE p.id_categoria = ?");
+    $consultaProducto->execute(array($id));
+    return $consultaProducto->fetchAll();
   }
 
   function deleteProducto($id_Prod){

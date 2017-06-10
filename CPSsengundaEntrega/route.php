@@ -19,7 +19,7 @@ function parseUrl($url){
   return $arrInfo;
 }
 
-function menuActionProducto($action,$value,$error,$id_prod){
+function menuActionProducto($action,$value,$error,$id){
   $controller_prod = new controllerProducto();
     switch ($action){
         case configApp::$ACTION_ADD:
@@ -30,13 +30,13 @@ function menuActionProducto($action,$value,$error,$id_prod){
             $controller_prod->insertarProducto($value);
             break;
         case configApp::$ACTION_VIEW_PROD:
-            $controller_prod->mostrarTodosProductos();
+            $controller_prod->mostrarTodosProductos(array(),$id);
             break;
         case configApp::$ACTION_DELETE_PROD:
-            $controller_prod->borrarProducto($id_prod);
+            $controller_prod->borrarProducto($id);
             break;
         case configApp::$ACTION_VIEW_DETAILS_PROD:
-            $controller_prod->mostrarDetProducto($id_prod);
+            $controller_prod->mostrarDetProducto($id);
             break;
         case '':
             $controller_prod->mostrarFormProducto(array(),$value);
