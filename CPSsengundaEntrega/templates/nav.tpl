@@ -20,12 +20,15 @@
           <li><a href="producto/insertar"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Insertar Producto</a></li>
           <li><a href="categoria/insertar"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Insertar Categoria</a></li>
         </ul>
-        <form class="navbar-form navbar-right">
+        <form class="navbar-form navbar-left">
           <div class="form-group">
             <input type="text" class="searchNav form-control" placeholder="Buscar">
           </div>
           <button type="submit" class="btn btn-default">Enviar</button>
         </form>
+     <ul class="nav navbar-nav navbar-right">
+       <li><a href=""><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+     </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
   </div>
