@@ -20,7 +20,7 @@
    }
 
    function mostrarProductos($productos,$errores,$listaCat,$init,$fin,
-                             $totalProd){
+                             $totalProd,$prev,$next){
      $this->smarty->assign('productos',$productos);
      $this->smarty->assign('errores',$errores);
      $this->smarty->assign('titulo', 'Productos');
@@ -29,6 +29,8 @@
      $this->smarty->assign('init',$init);
      $this->smarty->assign('totalProd',$totalProd);
      $this->smarty->assign('fin',$fin);
+     $this->smarty->assign('prev',$prev);
+     $this->smarty->assign('next',$next);
      $this->smarty->display('productos.tpl');
    }
 

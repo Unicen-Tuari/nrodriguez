@@ -184,6 +184,8 @@ public function mostrarTodosProductos($errores=[],$id){
       $totalProd=$this->modelProducto->totalProd();
       $page = isset($_GET['page']) ? $_GET['page'] : 1;
       $start = ($page-1)*$num_prod_page;
+      $prev=$page-1;
+      $next=$page+1;
       if ($start==0){
         $init = $start+1;
         $fin = $init+2;
@@ -197,21 +199,21 @@ public function mostrarTodosProductos($errores=[],$id){
           $productos = $this->modelProducto->getProductos($start,$num_prod_page);
           $listaCat = $this->modelCategoria->getCategorias();
           $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat,
-                                                 $init,$fin,$totalProd);
+                                                 $init,$fin,$totalProd,$prev,$next);
           break;
         default:
            if ($existeCat && $cantidadProd>0){
              $productos = $this->modelProducto->getProductosByCat($id);
              $listaCat = $this->modelCategoria->getCategorias();
              $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat,
-                                                    $init,$fin,$totalProd);
+                                                    $init,$fin,$totalProd,$prev,$next);
            }
            else{
              $errores[] = "No se encontraron productos con esa categoria";
              $productos = $this->modelProducto->getProductos();
              $listaCat = $this->modelCategoria->getCategorias();
              $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat,
-                                                    $init,$fin);
+                                                    $init,$fin,$prev,$next);
            }
            break;
       }

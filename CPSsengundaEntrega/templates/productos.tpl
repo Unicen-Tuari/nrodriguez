@@ -39,14 +39,14 @@
           <p class="center">Mostrar</p>
         </div>
         <div class="col-xs-12 col-lg-4">
+          {$cantidad = ceil($totalProd/3)}
           <div class="w3-bar">
-            {if $init>1}<a href="" class="w3-button">&laquo;</a>{/if}
-            <a href="producto/mostrarProductos?page=1" id="1"   class="w3-button">1</a>
-            <a href="producto/mostrarProductos?page=2"   id="2" class="w3-button">2</a>
-            <a href="producto/mostrarProductos?page=3"   id="3" class="w3-button">3</a>
-            <a href="producto/mostrarProductos?page=4"   id="4" class="w3-button">4</a>
+            {if $init>1}<a href="producto/mostrarProductos?page={$prev}" class="w3-button">&laquo;</a>{/if}
+            {for $i=1; $i<=$cantidad; $i++}
+            <a href="producto/mostrarProductos?page={$i}" id="{$i}"   class="w3-button">{$i}</a>
+            {/for}
             {if $fin<$totalProd}
-            <a href="producto/mostrarProductos?page={$num_prod_page}" class="w3-button">&raquo;</a>
+            <a href="producto/mostrarProductos?page={$next}" class="w3-button">&raquo;</a>
             {/if}
           </div>
         </div>
