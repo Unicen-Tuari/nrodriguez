@@ -27,7 +27,7 @@
           <button type="submit" class="btn btn-default">Enviar</button>
         </form>
      <ul class="nav navbar-nav navbar-right">
-       <li><a href=""><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
+       <li><a href="logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
      </ul>
       </div><!-- /.navbar-collapse -->
     </nav>

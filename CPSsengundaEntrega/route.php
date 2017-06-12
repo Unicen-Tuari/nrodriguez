@@ -3,6 +3,7 @@ require_once('controllers/controller_home.php');
 require_once('controllers/controller_producto.php');
 require_once('controllers/controller_contacto.php');
 require_once('controllers/controller_categoria.php');
+require_once('controllers/controller_login.php');
 require_once('config/config_app.php');
 
 function parseUrl($url){
@@ -10,11 +11,13 @@ function parseUrl($url){
   if (isset($arrData[0])){
   $arrInfo[configApp::$RESOURCE] = $arrData[0];
   }
+  if(sizeof($arrData) > 1){
   if (isset($arrData[1])){
     $arrInfo[configApp::$ACTION] = $arrData[1];
   }
   if (isset($arrData[2])){
     $arrInfo[configApp::$PARAMETERS] = $arrData[2];
+  }
   }
   return $arrInfo;
 }
@@ -50,17 +53,17 @@ function menuActionProducto($action,$value,$error,$id){
       }
 }
 
-function menuActionContacto($action,$value,$error){
+function menuActionContacto($action,$error){
   $controller_contact = new controllerContacto();
   switch ($action){
     case configApp::$ACTION_ADD:
-        $controller_contact->mostrarFormContacto(array(),$value);
+        $controller_contact->mostrarFormContacto(array());
         break;
      case '':
-        $controller_contact->mostrarFormContacto(array(),$value);
+        $controller_contact->mostrarFormContacto(array());
         break;
      default:
-        echo $error;;
+        echo $error;
         break;
     }
 }
@@ -84,58 +87,88 @@ function menuActionCategoria($action,$value,$error){
   }
 }
 
-if ($_REQUEST[configApp::$ACTION]==''){
-  $controller_Home = new controllerHome();
-  $controller_Home->mostrarHome();
-}
-else{
-  $value = configApp::$ACTION_ADD;
-  $datos = parseUrl($_REQUEST[configApp::$ACTION]);
-  if ($datos[configApp::$RESOURCE]=='listaCat'){
-    $controller_categoria = new controllerCategoria();
-    $controller_categoria->mostrarListaCat();
-  }
-  $errorRecurso = 'Recurso Invalido';
-  $errorAction = 'Accion Invalida';
-  switch ($datos[configApp::$RESOURCE]){
-    case configApp::$RESOURCE_PROD:
-        if (isset($datos[configApp::$ACTION])){
-          if (isset($datos[configApp::$PARAMETERS])){
-            $p = $datos[configApp::$PARAMETERS];
-          }
-          else{
-            $p='';
-          }
-          menuActionProducto($datos[configApp::$ACTION],$value,$errorAction,$p);
-        }
-        else {
-          $controller_prod = new controllerProducto();
-          $controller_prod->mostrarFormProducto(array(),'');
-        }
-        break;
-    case configApp::$RESOURCE_CONTACT:
-       if (isset($datos[configApp::$ACTION])){
-          menuActionContacto($datos[configApp::$ACTION],$value,$errorAction);
-        }
-      else{
-        $controller_contact = new controllerContacto();
-        $controller_contact->mostrarFormContacto(array(),$value);
-        }
-       break;
-      case configApp::$RESOURCE_CATEGORY:
-         if (isset($datos[configApp::$ACTION])){
-          menuActionCategoria($datos[configApp::$ACTION],$value,$errorAction);
-         }
-       else{
-         $controller_categoria = new controllerCategoria();
-         $controller_categoria->mostrarFormCategoria(array(),$value);
-         break;
-         }
-        break;
-      default:
-         echo $errorRecurso;
-         break;
+function menuActionLogin($action,$error){
+  $controller_login = new controllerLogin();
+  switch ($action){
+  case configApp::$ACTION_VIEW_LOGIN:
+    $controller_login->mostrarLogin(array(),$action);
+    break;
+  case configApp::$ACTION_REGISTER:
+    $controller_login->registrarse($action);
+    break;
+  case configApp::$ACTION_LOGIN:
+    $controller_login->loguearse();
+    break;
+  case '':
+    $controller_login->mostrarLogin(array(),$action);
+    break;
+  default:
+    echo $error;
+    break;
   }
 }
 
+if ($_REQUEST[configApp::$ACTION]==''){
+  $controller_home = new controllerHome();
+  $controller_home->mostrarHome();
+}
+else{
+  $errorRecurso = 'Recurso Invalido';
+  $errorAction = 'Accion Invalida';
+  $value = configApp::$ACTION_ADD;
+  $datos = parseUrl($_REQUEST[configApp::$ACTION]);
+  session_start();
+  if(isset($_SESSION['logueado'])){
+    if ($datos[configApp::$RESOURCE]=='listaCat'){
+      $controller_categoria = new controllerCategoria();
+      $controller_categoria->mostrarListaCat();
+    }
+    switch ($datos[configApp::$RESOURCE]){
+      case configApp::$RESOURCE_PROD:
+      if (isset($datos[configApp::$ACTION])){
+        if (isset($datos[configApp::$PARAMETERS])){
+          $p = $datos[configApp::$PARAMETERS];
+        }
+        else{
+          $p='';
+        }
+        menuActionProducto($datos[configApp::$ACTION],$value,$errorAction,$p);
+      }
+      else {
+        $controller_prod = new controllerProducto();
+        $controller_prod->mostrarFormProducto(array(),'');
+      }
+      break;
+      case configApp::$RESOURCE_CONTACT:
+      if (isset($datos[configApp::$ACTION])){
+        menuActionContacto($datos[configApp::$ACTION],$errorAction);
+      }
+      else{
+        $controller_contact = new controllerContacto();
+        $controller_contact->mostrarFormContacto(array());
+      }
+      break;
+      case configApp::$RESOURCE_CATEGORY:
+      if (isset($datos[configApp::$ACTION])){
+        menuActionCategoria($datos[configApp::$ACTION],$value,$errorAction);
+      }
+      else{
+        $controller_categoria = new controllerCategoria();
+        $controller_categoria->mostrarFormCategoria(array(),$value);
+        break;
+      }
+      break;
+      case configApp::$RESOURCE_LOGOUT:
+       session_destroy();
+       menuActionLogin(configApp::$ACTION_VIEW_LOGIN,$errorAction);
+       break;
+      default:
+      echo $errorRecurso;
+      break;
+    }
+  }
+  else {
+    menuActionLogin($datos[configApp::$ACTION],$errorAction);
+  }
+}
 ?>

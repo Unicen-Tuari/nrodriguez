@@ -10,3 +10,5 @@ ALTER TABLE `usuario`
 
 ALTER TABLE `usuario`
   MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `usuario` ADD UNIQUE(`email`);

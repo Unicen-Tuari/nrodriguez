@@ -9,8 +9,15 @@ class controllerHome{
   }
 
   public function mostrarHome(){
-    $this->viewHome->mostrar('Homepage');
+    session_start();
+    if (!isset($_SESSION['logueado'])){
+      header('Location: login');
+      die();
+    }
+    else{
+     $this->viewHome->mostrar('Homepage');
   }
+}
 }
 
 ?>
