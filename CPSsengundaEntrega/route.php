@@ -168,7 +168,13 @@ else{
     }
   }
   else {
+    if (!isset($datos[configApp::$ACTION])){
+      $datos[configApp::$ACTION]=configApp::$ACTION_VIEW_LOGIN;
+      menuActionLogin($datos[configApp::$ACTION],$errorAction);
+    }
+    else{
     menuActionLogin($datos[configApp::$ACTION],$errorAction);
+   }
   }
 }
 ?>
