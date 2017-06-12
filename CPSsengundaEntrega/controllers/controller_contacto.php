@@ -8,8 +8,8 @@ class controllerContacto{
     $this->vista = new viewContacto();
   }
 
-  function mostrarFormContacto($errores,$action){
-    $this->vista->getFormContact('Contacto',$errores,$action);
+  function mostrarFormContacto($errores){
+    $this->vista->getFormContact('Contacto',$errores);
   }
 }
 
