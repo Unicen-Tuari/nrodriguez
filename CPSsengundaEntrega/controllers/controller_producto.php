@@ -180,23 +180,38 @@ private function existeCategoria($id){
 public function mostrarTodosProductos($errores=[],$id){
       $existeCat = $this->existeCategoria($id);
       $cantidadProd = $this->modelCategoria->cantidadProductoByCat($id);
+      $num_prod_page = 3;
+      $totalProd=$this->modelProducto->totalProd();
+      $page = isset($_GET['page']) ? $_GET['page'] : 1;
+      $start = ($page-1)*$num_prod_page;
+      if ($start==0){
+        $init = $start+1;
+        $fin = $init+2;
+      }
+      else{
+        $init = $start+1;
+        $fin = $init+2;
+      }
       switch ($id){
         case '':
-          $productos = $this->modelProducto->getProductos();
+          $productos = $this->modelProducto->getProductos($start,$num_prod_page);
           $listaCat = $this->modelCategoria->getCategorias();
-          $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+          $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat,
+                                                 $init,$fin,$totalProd);
           break;
         default:
            if ($existeCat && $cantidadProd>0){
              $productos = $this->modelProducto->getProductosByCat($id);
              $listaCat = $this->modelCategoria->getCategorias();
-             $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+             $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat,
+                                                    $init,$fin,$totalProd);
            }
            else{
              $errores[] = "No se encontraron productos con esa categoria";
              $productos = $this->modelProducto->getProductos();
              $listaCat = $this->modelCategoria->getCategorias();
-             $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+             $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat,
+                                                    $init,$fin);
            }
            break;
       }
@@ -254,4 +269,5 @@ public function mostrarTodosProductos($errores=[],$id){
     }
   }
 }
+
 ?>

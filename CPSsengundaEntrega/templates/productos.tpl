@@ -30,7 +30,7 @@
       </div>
       <div class="nav-pagination row">
         <div class="col-xs-12 col-lg-3 ">
-          <p class="center">Productos 12-24 de 52</p>
+          <p class="center">Productos  {$init}{if $init!=$totalProd} -{$fin}{/if} de {$totalProd} </p>
         </div>
         <div class="col-xs-6 col-lg-3">
           <p class="center">Ordenar por</p>
@@ -40,12 +40,14 @@
         </div>
         <div class="col-xs-12 col-lg-4">
           <div class="w3-bar">
-            <a href="#" class="w3-button">&laquo;</a>
-            <a href="#" class="w3-button">1</a>
-            <a href="#" class="w3-button">2</a>
-            <a href="#" class="w3-button">3</a>
-            <a href="#" class="w3-button">4</a>
-            <a href="#" class="w3-button">&raquo;</a>
+            {if $init>1}<a href="" class="w3-button">&laquo;</a>{/if}
+            <a href="producto/mostrarProductos?page=1" id="1"   class="w3-button">1</a>
+            <a href="producto/mostrarProductos?page=2"   id="2" class="w3-button">2</a>
+            <a href="producto/mostrarProductos?page=3"   id="3" class="w3-button">3</a>
+            <a href="producto/mostrarProductos?page=4"   id="4" class="w3-button">4</a>
+            {if $fin<$totalProd}
+            <a href="producto/mostrarProductos?page={$num_prod_page}" class="w3-button">&raquo;</a>
+            {/if}
           </div>
         </div>
       </div>

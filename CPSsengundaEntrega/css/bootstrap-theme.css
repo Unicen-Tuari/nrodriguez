@@ -3,7 +3,7 @@ img{
   margin: auto;
 }
 
-.activado{
+.activadoNav{
   color: #0f348c !important;
   background-color: white;
 }
@@ -77,6 +77,13 @@ input[type=text].searchNav:focus {
 }
 
 .w3-button:hover {
+    color: #000;
+    background-color: #4075bd;
+    text-decoration: none;
+}
+
+
+.activePag{
     color: #000;
     background-color: #4075bd;
     text-decoration: none;

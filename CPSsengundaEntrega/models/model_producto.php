@@ -28,8 +28,8 @@
                                        $producto['marcaPorVoz'],
                                        $producto['categoria']));
   }
-  function getProductos(){
-    $consultaProducto = $this->db->prepare("SELECT * FROM producto LIMIT 12");
+  function getProductos($start,$num_tot_page){
+    $consultaProducto = $this->db->prepare("SELECT * FROM producto LIMIT $start,$num_tot_page");
     $producto=$consultaProducto->execute();
     return $consultaProducto->fetchall();
   }
@@ -52,6 +52,11 @@
     $delete = $this->db->prepare("DELETE FROM producto
                                     WHERE id_producto = ?");
     $delete->execute(array($id_Prod));
+  }
+  function totalProd(){
+    $totalProd = $this->db->prepare("SELECT * FROM producto");
+    $totalProd->execute();
+    return $totalProd->rowCount();
   }
 
 }
