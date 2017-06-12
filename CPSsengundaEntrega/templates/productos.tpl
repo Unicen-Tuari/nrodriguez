@@ -82,21 +82,27 @@
       </div>
       <input type="submit" value="Comparar">
     </form>
-      <div class="nav-pagination row">
-        <div class="col-xs-12 col-lg-4 ">
-          <p class="center">Productos 1-12 de 61</p>
-        </div>
-        <div class="col-xs-12 col-lg-offset-4 col-lg-4">
-          <div class="w3-bar">
-            <a href="#" class="w3-button">&laquo;</a>
-            <a href="#" class="w3-button">1</a>
-            <a href="#" class="w3-button">2</a>
-            <a href="#" class="w3-button">3</a>
-            <a href="#" class="w3-button">4</a>
-            <a href="#" class="w3-button">&raquo;</a>
-          </div>
+    <div class="nav-pagination row">
+      <div class="col-xs-12 col-lg-3 ">
+        <p class="center">Productos  {$init}{if $init!=$totalProd} -{$fin}{/if} de {$totalProd} </p>
+      </div>
+      <div class="col-xs-6 col-lg-3">
+        <p class="center">Ordenar por</p>
+      </div>
+      <div class="col-xs-6 col- col-lg-2">
+        <p class="center">Mostrar</p>
+      </div>
+      <div class="col-xs-12 col-lg-4">
+        {$cantidad = ceil($totalProd/3)}
+        <div class="w3-bar">
+          {if $init>1}<a href="producto/mostrarProductos?page={$prev}" class="w3-button">&laquo;</a>{/if}
+          {for $i=1; $i<=$cantidad; $i++}
+          <a href="producto/mostrarProductos?page={$i}" id="{$i}"   class="w3-button">{$i}</a>
+          {/for}
+          {if $fin<$totalProd}
+          <a href="producto/mostrarProductos?page={$next}" class="w3-button">&raquo;</a>
+          {/if}
         </div>
       </div>
-    </div>
     </div>
 {include file="footer.tpl"}
