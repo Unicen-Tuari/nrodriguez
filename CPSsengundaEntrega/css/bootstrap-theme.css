@@ -82,13 +82,6 @@ input[type=text].searchNav:focus {
     text-decoration: none;
 }
 
-
-.activePag{
-    color: #000;
-    background-color: #4075bd;
-    text-decoration: none;
-}
-
 .nav-pagination{
   border-top: 2px solid #0f348c;
   border-bottom: 2px solid #0f348c;

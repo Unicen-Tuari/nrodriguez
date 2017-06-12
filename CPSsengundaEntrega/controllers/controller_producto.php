@@ -265,9 +265,7 @@ public function mostrarTodosProductos($errores=[],$id){
      }
    else{
      $errores;
-     $productos = $this->modelProducto->getProductos();
-     $listaCat = $this->modelCategoria->getCategorias();
-     $this->vistaProducto->mostrarProductos($productos,$errores,$listaCat);
+     $this->mostrarTodosProductos($errores,1);
     }
   }
 }

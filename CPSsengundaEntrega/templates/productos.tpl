@@ -80,7 +80,11 @@
         {/if}
         {/foreach}
       </div>
-      <input type="submit" value="Comparar">
+      <div class="row">
+        <div class="col-lg-offset-5 col-md-3">
+          <input class="btn btn-info" type="submit" value="Comparar">
+        </div>
+      </div>
     </form>
     <div class="nav-pagination row">
       <div class="col-xs-12 col-lg-3 ">
@@ -97,7 +101,7 @@
         <div class="w3-bar">
           {if $init>1}<a href="producto/mostrarProductos?page={$prev}" class="w3-button">&laquo;</a>{/if}
           {for $i=1; $i<=$cantidad; $i++}
-          <a href="producto/mostrarProductos?page={$i}" id="{$i}"   class="w3-button">{$i}</a>
+          <a href="producto/mostrarProductos?page={$i}" id="{$i}"  class="w3-button">{$i}</a>
           {/for}
           {if $fin<$totalProd}
           <a href="producto/mostrarProductos?page={$next}" class="w3-button">&raquo;</a>
