@@ -59,5 +59,101 @@
     return $totalProd->rowCount();
   }
 
+  function modifyNameProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET nombre = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyPriceProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET precio = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyColorProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET color = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyDisplayProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET display  = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyBrandProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET marca = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyProcessorProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET procesador = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyCamPrinProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET camaraPrincipal = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyCamSecProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET camaraSecundaria = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifySOProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET sistemaOp = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyNetProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET red = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyFrequencyProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET frecuencia = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyBatteryProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET bateria = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyTimeProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET tiempo = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyMemoryIProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET memoriaI = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyWeightProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET peso = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyDimensionProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET dimension = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyScreenProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET pantalla = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyBluetoothProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET bluetooth = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+  function modifyVoiceDialingProduct($newValue,$id){
+    $actualizar = $this->db->prepare("UPDATE producto SET marcaporVoz = ?
+                                    WHERE id_producto = ?");
+    $result = $actualizar->execute(array($newValue,$id));
+  }
+
 }
 ?>

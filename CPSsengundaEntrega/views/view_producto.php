@@ -48,6 +48,17 @@
      $this->smarty->assign('baseDir',$this->baseDir);
      $this->smarty->display('comparacionProd.tpl');
    }
+
+   function getFormModifyProd($titulo,$errores,$id,$producto,$action){
+     $this->smarty->assign('titulo',$titulo);
+     $this->smarty->assign('errores',$errores);
+     $this->smarty->assign('id',$id);
+     $this->smarty->assign('action',$action);
+     $this->smarty->assign('baseDir',$this->baseDir);
+     $this->smarty->assign('producto',$producto);
+     $this->smarty->display('modifyProd.tpl');
+   }
+
  }
 
  ?>

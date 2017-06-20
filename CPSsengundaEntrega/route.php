@@ -38,6 +38,19 @@ function menuActionProducto($action,$value,$error,$id){
         case configApp::$ACTION_DELETE_PROD:
             $controller_prod->borrarProducto($id);
             break;
+        case configApp::$ACTION_MODIFY:
+            $controller_prod->mostrarFormModificarProd(array(),$id,$value);
+            break;
+        case configApp::$ACTION_MODIFY_PROD:
+            if (sizeof($_POST)==0){
+              $errores[]="FALTA CAMPO A MODIFICAR";
+              $controller_prod->mostrarFormModificarProd($errores,$id,$value);
+            }
+            else{
+            $value=configApp::$ACTION_MODIFY_PROD;
+            $controller_prod->modificarProducto($value,$id);
+            }
+            break;
         case configApp::$ACTION_VIEW_DETAILS_PROD:
             $controller_prod->mostrarDetProducto($id);
             break;

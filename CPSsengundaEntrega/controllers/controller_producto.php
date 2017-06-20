@@ -26,7 +26,7 @@ private function validaCampo($caracteristica){
     }
   }
 
-function insertarProducto($action){
+public function insertarProducto($action){
       $errores=array();
       $producto=array();
       if ($this->validaCampo($_POST['producto'])){
@@ -267,6 +267,90 @@ public function mostrarTodosProductos($errores=[],$id){
      $errores;
      $this->mostrarTodosProductos($errores,1);
     }
+  }
+
+  public function mostrarFormModificarProd($errores,$id,$action){
+    $producto = $this->modelProducto->getProductoById($id);
+    $this->vistaProducto->getFormModifyProd('Modificar Producto',$errores,$id,
+                                             $producto,$action);
+  }
+
+  public function modificarProducto($action,$id){
+        $errores=array();
+        foreach($_POST as $caract => $value){
+          if ($this->validaCampo($value)){
+            $caracteristica = $caract;
+            $newValue = $value;
+          }
+          else{
+            $errores[$caract] = "Error: Campo " . $caract . " vacio";
+          }
+        }
+        if (sizeof($errores)==0) {
+          switch ($caracteristica){
+            case 'nombre':
+            $this->modelProducto->modifyNameProduct($newValue,$id);
+            break;
+            case 'precio':
+            $this->modelProducto->modifyPriceProduct($newValue,$id);
+            break;
+            case 'marca':
+            $this->modelProducto->modifyBrandProduct($newValue,$id);
+            break;
+            case 'color':
+            $this->modelProducto->modifyColorProduct($newValue,$id);
+            break;
+            case 'display':
+            $this->modelProducto->modifyDisplayProduct($newValue,$id);
+            break;
+            case 'procesador':
+            $this->modelProducto->modifyProcessorProduct($newValue,$id);
+            break;
+            case 'camPrin':
+            $this->modelProducto->modifyCamPrinProduct($newValue,$id);
+            break;
+            case 'camSec':
+            $this->modelProducto->modifyCamSecProduct($newValue,$id);
+            break;
+            case 'so':
+            $this->modelProducto->modifySOProduct($newValue,$id);
+            break;
+            case 'red':
+            $this->modelProducto->modifyNetProduct($newValue,$id);
+            break;
+            case 'frecuencia':
+            $this->modelProducto->modifyFrequencyProduct($newValue,$id);
+            break;
+            case 'bateria':
+            $this->modelProducto->modifyBatteryProduct($newValue,$id);
+            break;
+            case 'tiempo':
+            $this->modelProducto->modifyTimeProduct($newValue,$id);
+            break;
+            case 'memoriaI':
+            $this->modelProducto->modifyMemoryIProduct($newValue,$id);
+            break;
+            case 'peso':
+            $this->modelProducto->modifyWeightProduct($newValue,$id);
+            break;
+            case 'dimension':
+            $this->modelProducto->modifyDimensionProduct($newValue,$id);
+            break;
+            case 'pantalla':
+            $this->modelProducto->modifyScreenProduct($newValue,$id);
+            break;
+            case 'bluetooth':
+            $this->modelProducto->modifyBluetoothProduct($newValue,$id);
+            break;
+            case 'marcaXVoz':
+            $this->modelProducto->modifyVoiceDialingProduct($newValue,$id);
+            break;
+          }
+          $this->mostrarFormModificarProd($errores,$id,$action);
+        }
+        else{
+          $this->mostrarFormModificarProd($errores,$id,'modificar');
+        }
   }
 }
 
