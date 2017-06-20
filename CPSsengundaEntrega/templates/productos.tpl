@@ -72,9 +72,14 @@
               <form  action="producto/comparar" method="post">
               <input id="{$producto['id_producto']}" type="checkbox" name="{$producto['id_producto']}"value="{$producto['id_producto']}">
               <label for="{$producto['id_producto']}">Comparar</label>
-              <p><a href="producto/modificar/{$producto['id_producto']}" class="btn btn-primary" role="button">Modificar</a>
-                <a href="producto/verDetalle/{$producto['id_producto']}" class="btn btn-info" role="button">Ver Detalle</a>
-              <a href="producto/eliminar/{$producto['id_producto']}" class="btn btn-danger" role="button">Eliminar</a></p>
+              <p><a href="producto/modificar/{$producto['id_producto']}" class="btn btn-primary" role="button">
+                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Modificar</a>
+                <a href="producto/verDetalle/{$producto['id_producto']}" class="btn btn-info" role="button">
+                  <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Ver Detalle</a>
+              <a href="producto/eliminar/{$producto['id_producto']}" class="btn btn-danger" role="button">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar</a></p>
+              <p><a href="#" class="btn btn-success" role="button">
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Comprar</a></p>
             </div>
           </div>
         </div>
