@@ -118,79 +118,79 @@
          {/if}
        <form action="producto/modificarProducto/{$id}" method="post">
          <input type="text" name="nombre" class="form-control" placeholder="Nombre">
-        <input class="btn" type="submit"  value="Modificar">
+        <input class="btn btn-primary" type="submit"  value="Modificar">
       </form>
       <form action="producto/modificarProducto/{$id}" method="post">
         <input type="text" name="precio" class="form-control" placeholder="Precio">
-       <input class="btn" type="submit"  value="Modificar">
+       <input class="btn btn-primary" type="submit"  value="Modificar">
      </form>
      <form action="producto/modificarProducto/{$id}" method="post">
        <input type="text" name="marca" class="form-control" placeholder="Marca">
-      <input class="btn" type="submit"  value="Modificar">
+      <input class="btn btn-primary" type="submit"  value="Modificar">
     </form>
     <form action="producto/modificarProducto/{$id}" method="post">
       <input type="text" name="color" class="form-control" placeholder="Color">
-     <input class="btn" type="submit"  value="Modificar">
+     <input class="btn btn-primary" type="submit"  value="Modificar">
    </form>
    <form action="producto/modificarProducto/{$id}" method="post">
      <input type="text" name="display" class="form-control" placeholder="Display">
-    <input class="btn" type="submit"  value="Modificar">
+    <input class="btn btn-primary" type="submit"  value="Modificar">
   </form>
   <form "action/producto/modificarProducto/{$id}" method="post">
     <input type="text" name="procesador" class="form-control" placeholder="Procesador">
-   <input class="btn" type="submit"  value="Modificar">
+   <input class="btn btn-primary" type="submit"  value="Modificar">
  </form>
  <form action="producto/modificarProducto/{$id}" method="post">
    <input type="text" name="camPrin" class="form-control" placeholder="Cam Prin">
-  <input class="btn" type="submit"  value="Modificar">
+  <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="camSec" class="form-control" placeholder="Cam Sec">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="so" class="form-control" placeholder="SO">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="red" class="form-control" placeholder="Red">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="frecuencia" class="form-control" placeholder="Frecuencia">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="bateria" class="form-control" placeholder="Bateria">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="tiempo" class="form-control" placeholder="Tiempo">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="memoriaI" class="form-control" placeholder="memoriaI">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="peso" class="form-control" placeholder="Peso">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="dimension" class="form-control" placeholder="Dimension">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="pantalla" class="form-control" placeholder="Pantalla">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="bluetooth" class="form-control" placeholder="Bluetooth">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
 <form action="producto/modificarProducto/{$id}" method="post">
   <input type="text" name="marcaXVoz" class="form-control" placeholder="marcaXVoz">
- <input class="btn" type="submit"  value="Modificar">
+ <input class="btn btn-primary" type="submit"  value="Modificar">
 </form>
      </div>
      </div>
