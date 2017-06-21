@@ -78,7 +78,7 @@ public function loguearse(){
     if (password_verify($password,$usuario['password'])){
       session_start();
       $_SESSION['logueado'] = true;
-      header('Location: http://localhost/proyect/nrodriguez/CPSsengundaEntrega/');
+      header('Location: ..');
     }
     else{
       $errores = 'Email or Password incorrect';
